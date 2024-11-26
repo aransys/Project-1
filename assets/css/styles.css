@@ -1,8 +1,14 @@
-/* Asterisk wildcard selector to override default styles added by the browser */
+/* General reset */
 * {
   padding: 0;
   margin: 0;
+  list-style: none;
   box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
 }
 
 /* General Styles */
@@ -14,19 +20,64 @@ body {
   color: #3a3a3a;
 }
 
-/* Header */
-header {
-  background-color: aquamarine;
+/* Navbar container */
+.navbar {
+  display: flex;
+  justify-content: space-between; /* Space between logo and links */
+  align-items: center; /* Center items vertically */
+  padding: 10px 20px;
+  background-color: #0a6887;
+  color: white;
 }
 
-/* Main Content */
-main {
-  background-color: lightblue;
-  /* Make main element take up any surplus space to push footer down */
-  flex: 1 0 auto;
+/* Navbar brand (logo) */
+.navbar-brand {
+  flex: 0 0 auto; /* Ensure the logo stays on the left */
 }
 
-/* Footer */
-footer {
-  background-color: lightgreen;
+.navbar-brand img {
+  height: 50px;
+  width: auto;
+}
+
+/* Centered links */
+.navbar-center {
+  flex: 1; /* Takes up remaining space between logo and right edge */
+  display: flex;
+  justify-content: center; /* Center links horizontally */
+}
+
+.navbar-links {
+  display: flex;
+  gap: 20px; /* Space between links */
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar-links a {
+  text-decoration: none;
+  color: white;
+  transition: color 0.3s;
+}
+
+.navbar-links a:hover {
+  color: #ddd;
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column; /* Stack logo and links */
+    align-items: center;
+  }
+
+  .navbar-center {
+    justify-content: center; /* Center links on smaller screens */
+  }
+
+  .navbar-links {
+    flex-direction: column; /* Stack links vertically */
+    gap: 10px;
+  }
 }
