@@ -444,20 +444,39 @@ body {
   text-decoration: none;
 }
 
-.footer-socials .social-icons {
+.footer-socials {
   display: flex;
   justify-content: center;
-  gap: 15px;
+  gap: 20px;
+  width: 100%; /* Make sure the container is full-width */
+  flex-wrap: wrap; /* Allow items to wrap on smaller screens */
+  text-align: center; /* Center align the content */
 }
 
-.footer-socials img {
-  width: 30px;
-  height: 30px;
-  transition: transform 0.3s;
+.footer-socials .follow-us {
+  white-space: nowrap; /* Prevent text from breaking into two lines */
+  font-size: 1.2rem; /* Adjust font size as needed */
+  margin-bottom: 10px; /* Add space at the bottom if needed */
 }
 
-.footer-socials img:hover {
+.footer-socials a {
+  color: #fff;
+  font-size: 30px;
+  text-decoration: none;
+  transition: transform 0.3s ease, color 0.3s ease;
+  background-color: #0a6887;
+  border-radius: 50%;
+  padding: 15px;
+}
+
+.footer-socials a:hover {
+  color: #fff;
   transform: scale(1.1);
+}
+
+.footer-socials a:focus-visible {
+  outline: 3px solid #98deff;
+  outline-offset: 2px;
 }
 
 .footer-bottom {
