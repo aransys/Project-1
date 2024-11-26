@@ -19,7 +19,24 @@ body {
   padding: 15px 20px;
   background-color: #0a6887;
   color: #fff;
-  box-sizing: border-box;
+  position: fixed; /* Make the navbar fixed */
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  transition: top 0.3s ease; /* Smooth transition for hiding/showing */
+}
+
+/* Optional: After sticky effect with an overlay */
+.navbar::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.1); /* Change background color after sticky effect */
+  z-index: -1; /* Ensure the effect stays behind the content */
 }
 
 .navbar-brand img {
@@ -53,24 +70,6 @@ body {
 }
 
 /* Main Section Styles */
-/* Hero Section */
-/* General styles for both Hero and Services sections */
-section {
-  position: relative;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-h2 {
-  font-size: 3rem;
-  color: white;
-  margin-bottom: 20px;
-  text-align: center;
-  text-transform: uppercase;
-}
-
 #hero {
   position: relative;
   height: 100vh; /* Full viewport height */
@@ -100,7 +99,7 @@ h2 {
   text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); /* Optional: adds a subtle shadow to make text stand out */
 }
 
-/* Optional: Overlay for better text readability */
+/* Overlay for better text readability */
 #hero::before {
   content: "";
   position: absolute;
