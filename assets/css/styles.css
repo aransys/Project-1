@@ -41,7 +41,7 @@ body {
 .navbar-links a {
   color: white;
   text-decoration: none;
-  padding: 10px;
+  padding: 12px 15px; /* Adjust the padding for better hit area */
   font-weight: bold;
   text-transform: uppercase;
   transition: all 0.3s ease;
@@ -54,18 +54,36 @@ body {
 
 /* Main Section Styles */
 /* Hero Section */
+/* General styles for both Hero and Services sections */
+section {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+h2 {
+  font-size: 3rem;
+  color: white;
+  margin-bottom: 20px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
 #hero {
   position: relative;
   height: 100vh; /* Full viewport height */
   background-image: url("/assets/images/washing.jpg");
   background-size: cover; /* Cover the entire section */
-  background-position: center; /* Center the image */
+  background-position: center center; /* Center the image */
   text-align: center; /* Center the text */
   color: white; /* Ensure text is readable */
   display: flex;
   flex-direction: column;
   justify-content: center; /* Vertically center the text */
   align-items: center; /* Horizontally center the text */
+  padding: 0 20px; /* Adds padding on the sides */
 }
 
 #hero h1 {
@@ -99,6 +117,100 @@ body {
   z-index: 2; /* Bring the text above the overlay */
 }
 
+/* Services section */
+.services-background {
+  background-image: url("/assets/images/machine.jpg");
+  background-size: cover; /* Cover ensures the image fills the area */
+  background-position: center center;
+  background-repeat: no-repeat;
+  height: 100vh; /* Ensure the section takes up the full viewport height */
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+}
+
+.services-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.service {
+  width: 250px;
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.5); /* Slightly dark background to enhance readability */
+  color: white;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.service img {
+  width: 60px;
+  height: 60px;
+  margin-bottom: 15px;
+}
+
+.service h3 {
+  font-size: 1.6rem;
+  margin-bottom: 10px;
+}
+
+.service p {
+  font-size: 1rem;
+  color: #ccc;
+}
+
+.cta-container {
+  background-color: #0a6887;
+  padding: 40px;
+  color: white;
+  text-align: center;
+  border-radius: 10px;
+  margin-top: 30px;
+  margin-bottom: 30px; /* Add margin below to separate from other sections */
+}
+
+.cta-container h3 {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+}
+
+.cta-container p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+}
+
+.cta-button {
+  background-color: #98deff;
+  color: #0a6887;
+  padding: 15px 30px;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1rem;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.cta-button:hover {
+  background-color: #007bb5;
+  transform: scale(1.05);
+}
+
+.cta-button:focus-visible {
+  outline: 3px solid #98deff;
+  outline-offset: 2px;
+}
+
 /* Responsive Styles */
 @media (max-width: 768px) {
   .navbar {
@@ -109,5 +221,20 @@ body {
   .navbar-links {
     flex-direction: column;
     gap: 15px;
+  }
+}
+
+@media (max-width: 768px) {
+  .cta-container {
+    padding: 20px; /* Adjust padding for smaller devices */
+  }
+}
+
+@media (max-width: 768px) {
+  #hero h1 {
+    font-size: 2.5rem; /* Reduce font size on mobile */
+  }
+  #hero p {
+    font-size: 1rem; /* Reduce paragraph font size on mobile */
   }
 }
