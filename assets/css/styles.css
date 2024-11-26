@@ -210,6 +210,95 @@ body {
   outline-offset: 2px;
 }
 
+/* Contact Form Section */
+#contact {
+  background-color: #f9f9f9;
+  height: 100vh; /* Make the contact section fill the full viewport height */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0; /* Remove extra padding to match other sections */
+}
+
+.contact-container {
+  max-width: 800px; /* Keeps the form centered and well-sized */
+  width: 100%; /* Ensures it stretches across available space */
+  padding: 20px; /* Adds inner padding for spacing */
+  text-align: center;
+}
+
+.contact-container h2 {
+  font-size: 2.5rem;
+  color: #0a6887;
+  margin-bottom: 20px;
+}
+
+.contact-container p {
+  font-size: 1.2rem;
+  color: #555;
+  margin-bottom: 30px;
+}
+
+.contact-form {
+  background-color: #ffffff;
+  border-radius: 10px;
+  padding: 30px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  max-width: 600px;
+  margin: 0 auto; /* Centers the form within the container */
+}
+
+.form-group {
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.form-group label {
+  display: block;
+  font-size: 1rem;
+  color: #333;
+  margin-bottom: 8px;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 12px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  transition: border-color 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: #0a6887;
+  outline: none;
+}
+
+.contact-submit {
+  display: inline-block;
+  padding: 15px 30px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #fff;
+  background-color: #0a6887;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.contact-submit:hover {
+  background-color: #007bb5;
+  transform: scale(1.05);
+}
+
+.contact-submit:focus {
+  outline: 3px solid #98deff;
+  outline-offset: 3px;
+}
+
 /* Responsive Styles */
 @media (max-width: 768px) {
   .navbar {
@@ -235,5 +324,19 @@ body {
   }
   #hero p {
     font-size: 1rem; /* Reduce paragraph font size on mobile */
+  }
+}
+
+@media (max-width: 768px) {
+  .contact-container {
+    padding: 0 10px;
+  }
+
+  .contact-container h2 {
+    font-size: 2rem;
+  }
+
+  .contact-form {
+    padding: 20px;
   }
 }

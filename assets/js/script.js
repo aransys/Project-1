@@ -15,3 +15,18 @@ window.addEventListener("scroll", function () {
 
   lastScrollTop = scrollTop <= 0 ? 0 : scrollTop; // Prevent negative scroll values
 });
+
+// Select the form and the button
+const contactForm = document.getElementById("contact");
+
+// Add a submit event listener
+contactForm.addEventListener("submit", function (event) {
+  // Prevent the default form submission
+  event.preventDefault();
+
+  // Simulate a success prompt
+  alert("Thank you for your message! We will get back to you soon.");
+
+  // Optionally, clear the form fields
+  contactForm.reset();
+});
