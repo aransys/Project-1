@@ -75,12 +75,12 @@ body {
   left: 0;
   width: 0;
   height: 2px;
-  background-color: #4eca92; /* Underline color */
+  background-color: #98deff; /* Underline color */
   transition: width 0.3s ease;
 }
 
 .navbar-links a:hover {
-  color: #4eca92; /* Change text color */
+  color: #98deff; /* Change text color */
   transform: scale(1.1); /* Scale up the link */
 }
 
