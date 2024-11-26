@@ -24,13 +24,13 @@ body {
 }
 
 /* Navbar container */
+
 .navbar {
   display: flex;
   justify-content: space-between; /* Space between logo and links */
   align-items: center; /* Center items vertically */
   padding: 10px 20px;
   background-color: #0a6887;
-  color: white;
   font-weight: 500;
 }
 
@@ -40,7 +40,7 @@ body {
 }
 
 .navbar-brand img {
-  height: 50px;
+  height: 40px;
   width: auto;
 }
 
@@ -63,7 +63,7 @@ body {
 .navbar-links a {
   position: relative;
   text-decoration: none;
-  color: white;
+  color: whitesmoke;
   padding: 10px;
   transition: color 0.3s ease, transform 0.3s ease, text-shadow 0.3s ease; /* Added transition for text-shadow */
 }
@@ -75,12 +75,12 @@ body {
   left: 0;
   width: 0;
   height: 2px;
-  background-color: #f39c12; /* Underline color */
+  background-color: #4eca92; /* Underline color */
   transition: width 0.3s ease;
 }
 
 .navbar-links a:hover {
-  color: #f39c12; /* Change text color */
+  color: #4eca92; /* Change text color */
   transform: scale(1.1); /* Scale up the link */
 }
 
