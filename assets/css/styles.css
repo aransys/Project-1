@@ -56,17 +56,32 @@ body {
 }
 
 .navbar-links a {
+  position: relative;
   color: white;
   text-decoration: none;
-  padding: 12px 15px; /* Adjust the padding for better hit area */
+  padding: 12px 15px;
   font-weight: bold;
   text-transform: uppercase;
-  transition: all 0.3s ease;
+  transition: color 0.3s ease;
+}
+
+.navbar-links a::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #98deff;
+  transition: width 0.3s ease;
 }
 
 .navbar-links a:hover {
   color: #98deff;
-  text-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
+
+.navbar-links a:hover::after {
+  width: 100%;
 }
 
 /* Main Section Styles */
@@ -135,6 +150,11 @@ body {
   margin: 0;
   overflow: hidden;
   color: #333; /* Lighter text for better contrast */
+}
+
+.services-background h2 {
+  font-size: 2.5rem;
+  margin-bottom: 30px;
 }
 
 /* Animated Shape Overlays */
@@ -243,26 +263,34 @@ body {
 }
 
 .cta-button {
-  background-color: #007bb5; /* Matches the form button background */
-  color: white; /* Text color */
-  padding: 15px 30px; /* Comfortable padding */
+  display: inline-block;
+  padding: 15px 30px;
+  font-size: 1.1rem;
   font-weight: bold;
-  font-size: 1rem;
-  text-transform: uppercase;
   text-decoration: none;
+  color: #fff;
+  background-color: #98deff;
   border: none;
-  border-radius: 5px; /* Rounded corners for consistency */
-  cursor: pointer; /* Pointer on hover */
-  transition: background-color 0.3s ease, transform 0.3s ease;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 .cta-button:hover {
-  background-color: #005f8c; /* Darker shade for hover effect */
-  transform: translateY(-2px); /* Subtle lift effect */
+  background-color: #005f8c; /* Darker shade on hover */
+  transform: translateY(-2px); /* Hover effect */
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3); /* Enhanced shadow */
+  transform: scale(1.05);
+}
+
+.cta-button:active {
+  background-color: #004970; /* Slightly darker on click */
+  transform: translateY(2px); /* Pressed effect */
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2); /* Reduced shadow */
 }
 
 .cta-button:focus-visible {
-  outline: 3px solid #98deff; /* Focus ring for accessibility */
+  outline: 3px solid #98deff; /* Focus outline */
   outline-offset: 2px;
 }
 
