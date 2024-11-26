@@ -53,10 +53,50 @@ body {
 }
 
 /* Main Section Styles */
-main {
-  text-align: center;
-  padding: 80px 20px;
-  background-color: #f4f4f4;
+/* Hero Section */
+#hero {
+  position: relative;
+  height: 100vh; /* Full viewport height */
+  background-image: url("/assets/images/washing.jpg");
+  background-size: cover; /* Cover the entire section */
+  background-position: center; /* Center the image */
+  text-align: center; /* Center the text */
+  color: white; /* Ensure text is readable */
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Vertically center the text */
+  align-items: center; /* Horizontally center the text */
+}
+
+#hero h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+
+#hero p {
+  font-size: 1.2rem;
+  font-weight: 300;
+  max-width: 600px;
+  line-height: 1.5;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); /* Optional: adds a subtle shadow to make text stand out */
+}
+
+/* Optional: Overlay for better text readability */
+#hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Dark overlay to enhance text visibility */
+  z-index: 1;
+}
+
+#hero h1,
+#hero p {
+  z-index: 2; /* Bring the text above the overlay */
 }
 
 /* Responsive Styles */
