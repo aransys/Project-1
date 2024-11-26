@@ -212,7 +212,7 @@ body {
 
 /* Contact Form Section */
 #contact {
-  background-color: #f9f9f9;
+  background-color: #98deff;
   height: 100vh; /* Make the contact section fill the full viewport height */
   display: flex;
   justify-content: center;
@@ -299,6 +299,93 @@ body {
   outline-offset: 3px;
 }
 
+/* Footer Section */
+.footer {
+  background-color: #0a6887;
+  color: white;
+  padding: 40px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 1200px;
+  width: 100%;
+  gap: 30px;
+}
+
+.footer-container > div {
+  flex: 1 1 calc(25% - 30px); /* Responsive grid layout */
+  min-width: 200px;
+}
+
+.footer h3 {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+}
+
+.footer p,
+.footer ul {
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+.footer ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer ul li {
+  margin: 10px 0;
+}
+
+.footer ul li a {
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.footer ul li a:hover {
+  color: #98deff;
+}
+
+.footer-contact a {
+  color: #98deff;
+  text-decoration: none;
+}
+
+.footer-socials .social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.footer-socials img {
+  width: 30px;
+  height: 30px;
+  transition: transform 0.3s;
+}
+
+.footer-socials img:hover {
+  transform: scale(1.1);
+}
+
+.footer-bottom {
+  margin-top: 20px;
+  font-size: 0.8rem;
+  color: #ccc;
+}
+
+.footer-bottom p {
+  margin: 0;
+}
+
 /* Responsive Styles */
 @media (max-width: 768px) {
   .navbar {
@@ -338,5 +425,13 @@ body {
 
   .contact-form {
     padding: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
   }
 }
