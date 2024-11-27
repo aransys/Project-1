@@ -366,21 +366,32 @@ body {
 
 /* Pricing section */
 #pricing {
-  background-color: #105372; /* Or any desired background */
-  height: 100vh; /* Fills the full viewport height */
+  background: linear-gradient(135deg, #105372 0%, #0a3d54 100%);
+  min-height: 100vh;
   display: flex;
-  flex-direction: column; /* Stack the content vertically */
-  justify-content: center; /* Center content vertically */
-  align-items: center; /* Center content horizontally */
-  padding: 0; /* Remove any extra padding */
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 4rem 1rem;
+  color: #ffffff;
 }
 
 #pricing h2 {
   font-size: 2.5rem;
-  color: #333;
-  margin-bottom: 2rem;
+  margin-bottom: 3rem;
   text-transform: uppercase;
   letter-spacing: 2px;
+  text-align: center;
+  position: relative;
+}
+
+#pricing h2::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 3px;
+  background: #ffffff;
+  margin: 1rem auto 0;
 }
 
 .pricing-table {
@@ -388,38 +399,117 @@ body {
   justify-content: center;
   flex-wrap: wrap;
   gap: 2rem;
-  max-width: 1200px; /* Limit the table's width for better readability */
+  max-width: 1200px;
   width: 100%;
+  margin: 0 auto;
 }
 
 .pricing-item {
-  background: #fff;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  padding: 2rem;
-  max-width: 300px;
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 12px;
+  padding: 2.5rem 2rem;
+  max-width: 320px;
   width: 100%;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  text-align: center;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
 }
 
 .pricing-item:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  transform: translateY(-10px);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.2);
+}
+
+.popular-tag {
+  position: absolute;
+  top: 20px;
+  right: -35px;
+  background: #ff6b6b;
+  color: white;
+  padding: 8px 40px;
+  transform: rotate(45deg);
+  font-size: 0.9rem;
+  font-weight: bold;
 }
 
 .pricing-item h3 {
   font-size: 1.8rem;
-  color: #0073e6;
-  margin-bottom: 1rem;
-  text-transform: capitalize;
+  color: #105372;
+  margin-bottom: 1.5rem;
+  text-align: center;
 }
 
-.pricing-item p {
-  font-size: 1.4rem;
+.price {
+  text-align: center;
+  margin-bottom: 2rem;
+  padding: 1rem 0;
+  border-bottom: 2px solid #f0f0f0;
+}
+
+.price .amount {
+  font-size: 2.2rem;
+  font-weight: bold;
+  color: #105372;
+}
+
+.price .unit {
+  font-size: 1rem;
   color: #666;
-  margin: 1rem 0 0;
+  margin-left: 5px;
+}
+
+.features {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 2rem 0;
+}
+
+.features li {
+  padding: 0.8rem 0;
+  color: #555;
+  text-align: center;
+  position: relative;
+}
+
+.features li::before {
+  content: "✓";
+  color: #105372;
+  margin-right: 8px;
+  font-weight: bold;
+}
+
+.cta-button {
+  display: block;
+  width: 100%;
+  padding: 1rem;
+  background: #105372;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.cta-button:hover {
+  background: #0a3d54;
+}
+
+@media (max-width: 768px) {
+  .pricing-table {
+    gap: 1rem;
+  }
+
+  .pricing-item {
+    max-width: 100%;
+    margin: 0 1rem;
+  }
+
+  #pricing {
+    padding: 2rem 1rem;
+  }
 }
 
 /* Contact Form Section */
