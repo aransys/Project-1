@@ -30,3 +30,38 @@ contactForm.addEventListener("submit", function (event) {
   // Optionally, clear the form fields
   contactForm.reset();
 });
+
+// Hamburger menu
+document.addEventListener("DOMContentLoaded", () => {
+  const hamburgerMenu = document.querySelector(".hamburger-menu");
+  const navbarCenter = document.querySelector(".navbar-center");
+
+  hamburgerMenu.addEventListener("click", () => {
+    // Toggle active class on hamburger and navbar
+    hamburgerMenu.classList.toggle("active");
+    navbarCenter.classList.toggle("active");
+
+    // Accessibility: Toggle aria-expanded
+    const isExpanded = hamburgerMenu.classList.contains("active");
+    hamburgerMenu.setAttribute("aria-expanded", isExpanded);
+  });
+
+  // Close menu when a link is clicked
+  document.querySelectorAll(".navbar-links a").forEach((link) => {
+    link.addEventListener("click", () => {
+      hamburgerMenu.classList.remove("active");
+      navbarCenter.classList.remove("active");
+    });
+  });
+
+  // Close menu if clicked outside
+  document.addEventListener("click", (event) => {
+    const isClickInsideNav = navbarCenter.contains(event.target);
+    const isClickHamburger = hamburgerMenu.contains(event.target);
+
+    if (!isClickInsideNav && !isClickHamburger && navbarCenter.classList.contains("active")) {
+      hamburgerMenu.classList.remove("active");
+      navbarCenter.classList.remove("active");
+    }
+  });
+});
