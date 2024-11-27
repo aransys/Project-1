@@ -203,165 +203,134 @@ body {
 
 /* Services section */
 .services-background {
-  position: relative; /* For overlay and decorative elements */
-  background-image: linear-gradient(120deg, rgba(127, 193, 248, 0.8), rgba(72, 120, 171, 0.8));
-  background-size: cover, cover; /* Ensure both image and gradient cover the section */
-  background-blend-mode: overlay; /* Blend the gradient with the image */
-  background-position: center center;
-  background-repeat: no-repeat;
-  height: 100vh;
+  position: relative;
+  background: linear-gradient(120deg, rgba(127, 193, 248, 0.9), rgba(72, 120, 171, 0.9));
+  min-height: 100vh;
   width: 100%;
+  padding: 4rem 2rem;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
-  text-align: center;
-  padding: 0;
-  margin: 0;
-  overflow: hidden;
-  color: #333; /* Lighter text for better contrast */
+  gap: 4rem;
 }
 
 .services-background h2 {
   font-size: 2.5rem;
-  margin-bottom: 30px;
+  color: white;
+  text-align: center;
+  margin-bottom: 2rem;
 }
 
-/* Animated Shape Overlays */
-.services-background::before {
-  content: "";
-  position: absolute;
-  top: -50px;
-  left: -50px;
-  width: 200px;
-  height: 200px;
-  background: rgba(255, 255, 255, 0.4); /* Lighter overlay circle */
-  border-radius: 50%; /* Circular shape */
-  animation: float 6s infinite ease-in-out;
-  z-index: 1; /* Behind the text content */
-}
-
-.services-background::after {
-  content: "";
-  position: absolute;
-  bottom: -60px;
-  right: -60px;
-  width: 250px;
-  height: 250px;
-  background: rgba(255, 255, 255, 0.3); /* Slightly lighter than before */
-  border-radius: 50%; /* Circular shape */
-  animation: float-reverse 8s infinite ease-in-out;
-  z-index: 1; /* Behind the text content */
-}
-
-/* Animation Keyframes */
-@keyframes float {
-  0%,
-  100% {
-    transform: translateY(0) translateX(0);
-  }
-  50% {
-    transform: translateY(-20px) translateX(20px);
-  }
-}
-
-@keyframes float-reverse {
-  0%,
-  100% {
-    transform: translateY(0) translateX(0);
-  }
-  50% {
-    transform: translateY(20px) translateX(-20px);
-  }
-}
-
-/* Bring Content Above Overlays */
 .services-container {
-  z-index: 2;
-  position: relative; /* Ensure it stacks above background elements */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 30px;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
 }
 
 .service {
-  width: 250px;
-  padding: 20px;
-  background-color: rgba(255, 255, 255, 0.7); /* Lighter background for services */
-  color: #333; /* Darker text for readability */
-  border-radius: 10px;
-  text-align: center;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 12px;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.service:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
 }
 
 .service img {
   width: 60px;
   height: 60px;
-  margin-bottom: 15px;
+  margin-bottom: 0.5rem;
 }
 
 .service h3 {
-  font-size: 1.6rem;
-  margin-bottom: 10px;
+  color: #0a6887;
+  font-size: 1.4rem;
+  margin: 0;
+  text-align: center;
 }
 
 .service p {
+  color: #555;
   font-size: 1rem;
-  color: #ccc;
+  line-height: 1.6;
+  margin: 0;
+  text-align: center;
 }
 
 .cta-container {
   background-color: #0a6887;
-  padding: 40px;
-  color: white;
+  width: min(100%, 600px);
+  margin: 2rem auto;
+  padding: 3rem;
+  border-radius: 16px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
   text-align: center;
-  border-radius: 10px;
-  margin-top: 30px;
-  margin-bottom: 30px; /* Add margin below to separate from other sections */
+  color: white;
 }
 
 .cta-container h3 {
   font-size: 1.8rem;
-  margin-bottom: 20px;
+  margin-bottom: 1rem;
 }
 
 .cta-container p {
   font-size: 1.2rem;
-  margin-bottom: 30px;
+  margin-bottom: 2rem;
+  opacity: 0.9;
 }
 
 .cta-button {
-  display: inline-block;
-  padding: 15px 30px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem 2rem;
   font-size: 1.1rem;
-  font-weight: bold;
-  text-decoration: none;
-  color: #fff;
+  font-weight: 600;
   background-color: #5fc0ec;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s ease, transform 0.2s ease;
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  min-width: 200px;
 }
 
 .cta-button:hover {
-  background-color: #005f8c; /* Darker shade on hover */
-  transform: translateY(-2px); /* Hover effect */
-  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3); /* Enhanced shadow */
-  transform: scale(1.05);
+  background-color: #005f8c;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
 }
 
-.cta-button:active {
-  background-color: #004970; /* Slightly darker on click */
-  transform: translateY(2px); /* Pressed effect */
-  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2); /* Reduced shadow */
+@media (max-width: 992px) {
+  .services-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
-.cta-button:focus-visible {
-  outline: 3px solid #98deff; /* Focus outline */
-  outline-offset: 2px;
+@media (max-width: 768px) {
+  .services-background {
+    padding: 3rem 1rem;
+  }
+
+  .services-container {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .cta-container {
+    padding: 2rem;
+    margin: 1rem;
+  }
 }
 
 /* Pricing section */
