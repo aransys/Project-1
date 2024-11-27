@@ -92,7 +92,7 @@ body {
 #hero {
   position: relative;
   height: 100vh; /* Full viewport height */
-  background-image: url("../assets/images/washing.jpg");
+  background-image: url("/assets/images/washing.jpg");
   background-size: cover; /* Cover the entire section */
   background-position: center center; /* Center the image */
   text-align: center; /* Center the text */
