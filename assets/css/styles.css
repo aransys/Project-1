@@ -300,9 +300,13 @@ body {
 
 /* Pricing section */
 #pricing {
-  padding: 4rem 2rem;
-  background-color: #f9f9f9;
-  text-align: center;
+  background-color: #105372; /* Or any desired background */
+  height: 100vh; /* Fills the full viewport height */
+  display: flex;
+  flex-direction: column; /* Stack the content vertically */
+  justify-content: center; /* Center content vertically */
+  align-items: center; /* Center content horizontally */
+  padding: 0; /* Remove any extra padding */
 }
 
 #pricing h2 {
@@ -318,6 +322,8 @@ body {
   justify-content: center;
   flex-wrap: wrap;
   gap: 2rem;
+  max-width: 1200px; /* Limit the table's width for better readability */
+  width: 100%;
 }
 
 .pricing-item {
@@ -727,6 +733,18 @@ body {
 
   .cta-container p {
     font-size: 1rem;
+  }
+}
+
+/* Responsive Pricing Table */
+@media (max-width: 768px) {
+  .pricing-table {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .pricing-item {
+    max-width: 90%;
   }
 }
 
