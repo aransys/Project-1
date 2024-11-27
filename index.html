@@ -188,39 +188,31 @@
           <div class="contact-wrapper">
             <div class="contact-info">
               <div class="info-item">
-                <i class="contact-icon">📍</i>
-                <div>
-                  <h3>Visit Us</h3>
-                  <p>123 Laundry Lane<br />City, State 12345</p>
-                </div>
+                <span class="contact-icon">📍</span>
+                <h3>Visit Us</h3>
+                <p>123 Laundry Lane<br />City, State 12345</p>
               </div>
               <div class="info-item">
-                <i class="contact-icon">📞</i>
-                <div>
-                  <h3>Call Us</h3>
-                  <p>(555) 123-4567</p>
-                </div>
+                <span class="contact-icon">📞</span>
+                <h3>Call Us</h3>
+                <p>(555) 123-4567</p>
               </div>
               <div class="info-item">
-                <i class="contact-icon">✉️</i>
-                <div>
-                  <h3>Email Us</h3>
-                  <p>hello@laundryservice.com</p>
-                </div>
+                <span class="contact-icon">✉️</span>
+                <h3>Email Us</h3>
+                <p>hello@laundryservice.com</p>
               </div>
             </div>
 
-            <form class="contact-form" action="#" method="post" aria-label="Contact Form">
+            <form class="contact-form">
               <div class="form-group">
                 <label for="name">Name</label>
-                <input type="text" id="name" name="name" placeholder="Your Full Name" required pattern="[A-Za-z\s]+" title="Please enter a valid name" />
-                <span class="error-message">Please enter a valid name</span>
+                <input type="text" id="name" name="name" placeholder="Your Full Name" required />
               </div>
 
               <div class="form-group">
                 <label for="email">Email</label>
                 <input type="email" id="email" name="email" placeholder="Your Email Address" required />
-                <span class="error-message">Please enter a valid email address</span>
               </div>
 
               <div class="form-group">
@@ -236,13 +228,12 @@
 
               <div class="form-group">
                 <label for="message">Message</label>
-                <textarea id="message" name="message" rows="5" placeholder="Your Message" required minlength="10"></textarea>
-                <span class="error-message">Message must be at least 10 characters</span>
+                <textarea id="message" name="message" rows="5" placeholder="Your Message" required></textarea>
                 <div class="character-count">0/500</div>
               </div>
 
               <button type="submit" class="contact-submit">
-                <span>Send Message</span>
+                Send Message
                 <div class="submit-loader"></div>
               </button>
             </form>
