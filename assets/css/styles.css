@@ -91,13 +91,13 @@ body {
 /* Main Styles */
 /* Hero section */
 .hero-section {
-  position: relative; /* Establish stacking context for child elements like overlay */
-  z-index: 1; /* Set lower z-index to ensure it stays beneath the overlay */
+  position: relative;
+  z-index: 1;
   padding: 100px 20px;
   text-align: center;
   background: url("/assets/images/washing.jpg") no-repeat center center;
   background-size: cover;
-  min-height: 100vh; /* Ensures hero section takes the full viewport height */
+  min-height: 100vh;
   color: white;
   display: flex;
   flex-direction: column;
@@ -108,7 +108,7 @@ body {
 /* Hero content should sit above the overlay */
 .hero-content {
   position: relative;
-  z-index: 3; /* Ensure content stays above the overlay */
+  z-index: 3;
   max-width: 1200px;
   margin: 0 auto;
   padding: 20px;
@@ -120,31 +120,21 @@ body {
   justify-content: center;
   gap: 15px;
   margin-top: 40px;
-  z-index: 4; /* Ensure buttons are above the overlay */
 }
 
-.hero-buttons .btn {
+/* Modify selectors to target anchor tags directly */
+.hero-buttons .btn-primary,
+.hero-buttons .btn-secondary {
   padding: 10px 20px;
   font-size: 1rem;
   border: none;
   border-radius: 5px;
   cursor: pointer;
   text-transform: uppercase;
-  pointer-events: auto;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  display: inline-block;
+  text-decoration: none;
   transition: transform 0.3s ease, background-color 0.3s ease;
   flex: 1;
-  z-index: 4; /* Ensure buttons are above the overlay */
-}
-
-.hero-buttons .btn a {
-  display: block;
-  width: 100%;
-  text-decoration: none;
-  color: inherit;
-  text-align: center;
 }
 
 .hero-buttons .btn-primary {
@@ -158,25 +148,27 @@ body {
   border: 1px solid #ccc;
 }
 
-.hero-buttons .btn:hover {
+.hero-buttons .btn-primary:hover,
+.hero-buttons .btn-secondary:hover {
   background-color: #007bb5;
   transform: scale(1.02);
 }
 
-.hero-buttons .btn:focus {
+.hero-buttons .btn-primary:focus,
+.hero-buttons .btn-secondary:focus {
   outline: 3px solid #98deff;
   outline-offset: 3px;
 }
 
 /* Overlay styles */
 .hero-overlay {
-  position: absolute; /* Position it inside the hero section */
+  position: absolute;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay */
-  z-index: 2; /* Place overlay below buttons and content */
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 2;
 }
 
 /* Services section */
