@@ -298,6 +298,58 @@ body {
   outline-offset: 2px;
 }
 
+/* Pricing section */
+#pricing {
+  padding: 4rem 2rem;
+  background-color: #f9f9f9;
+  text-align: center;
+}
+
+#pricing h2 {
+  font-size: 2.5rem;
+  color: #333;
+  margin-bottom: 2rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.pricing-table {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.pricing-item {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 2rem;
+  max-width: 300px;
+  width: 100%;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
+}
+
+.pricing-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.pricing-item h3 {
+  font-size: 1.8rem;
+  color: #0073e6;
+  margin-bottom: 1rem;
+  text-transform: capitalize;
+}
+
+.pricing-item p {
+  font-size: 1.4rem;
+  color: #666;
+  margin: 1rem 0 0;
+}
+
 /* Contact Form Section */
 #contact {
   background-color: #98deff;
