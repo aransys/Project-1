@@ -138,10 +138,10 @@ body {
 
 /* Hero section buttons styles */
 .hero-buttons {
-  margin-top: 20px; /* Add space between the paragraph and buttons */
+  margin-top: 40px;
   display: flex;
-  gap: 15px; /* Space between buttons */
-  position: relative; /* Ensure buttons appear above the overlay */
+  gap: 30px;
+  position: relative;
   z-index: 2;
 }
 
@@ -152,7 +152,9 @@ body {
   border-radius: 5px;
   cursor: pointer;
   text-transform: uppercase;
-  pointer-events: auto; /* Make buttons interactive */
+  pointer-events: auto;
+  flex-grow: 1;
+  min-width: 150px; /* Ensures a minimum width for the buttons */
 }
 
 .hero-buttons .btn-primary {
@@ -164,6 +166,16 @@ body {
   background-color: #f1f1f1;
   color: #333;
   border: 1px solid #ccc;
+}
+
+.hero-buttons .btn:hover {
+  background-color: #007bb5; /* Or any other hover style */
+  transform: scale(1.05); /* Apply scale effect on hover */
+}
+
+.hero-buttons:focus {
+  outline: 3px solid #98deff;
+  outline-offset: 3px;
 }
 
 /* Services section */
