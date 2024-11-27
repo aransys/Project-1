@@ -5,10 +5,14 @@
   box-sizing: border-box;
 }
 
+html {
+  font-size: 16px; /* Base font size for responsive typography */
+}
+
 body {
   font-family: "Roboto", sans-serif;
-  margin: 0;
-  padding: 0;
+  min-width: 320px; /* Prevent extremely narrow layouts */
+  overflow-x: hidden; /* Prevent horizontal scrolling */
 }
 
 /* Navbar Styles */
@@ -513,51 +517,189 @@ body {
 }
 
 /* Responsive Styles */
-@media (max-width: 768px) {
+@media screen and (max-width: 768px) {
   .navbar {
+    padding: 10px;
     flex-direction: column;
-    align-items: center;
+    position: relative;
+  }
+
+  .navbar-brand {
+    margin-bottom: 15px;
+  }
+
+  .navbar-center {
+    width: 100%;
   }
 
   .navbar-links {
     flex-direction: column;
-    gap: 15px;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .navbar-links li {
+    width: 100%;
+    text-align: center;
+  }
+
+  .navbar-links a {
+    display: block;
+    padding: 10px;
+    width: 100%;
   }
 }
 
-@media (max-width: 768px) {
-  .cta-container {
-    padding: 20px; /* Adjust padding for smaller devices */
+/* Responsive Hero Section */
+@media screen and (max-width: 768px) {
+  #hero {
+    padding: 0 15px;
+    text-align: center;
   }
-}
 
-@media (max-width: 768px) {
   #hero h1 {
-    font-size: 2.5rem; /* Reduce font size on mobile */
+    font-size: 2rem;
+    margin-bottom: 15px;
   }
+
   #hero p {
-    font-size: 1rem; /* Reduce paragraph font size on mobile */
+    font-size: 1rem;
+    max-width: 100%;
   }
 }
 
-@media (max-width: 768px) {
-  .contact-container {
-    padding: 0 10px;
+/* Responsive Services Section */
+@media screen and (max-width: 768px) {
+  .services-background {
+    padding: 20px;
+    height: auto;
   }
 
-  .contact-container h2 {
+  .services-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .service {
+    width: 100%;
+    max-width: 350px;
+    margin-bottom: 20px;
+  }
+
+  .services-background h2 {
     font-size: 2rem;
+    margin-bottom: 20px;
+  }
+}
+
+/* Responsive CTA */
+@media screen and (max-width: 768px) {
+  .cta-container {
+    padding: 20px;
+    margin: 20px 0;
+  }
+
+  .cta-container h3 {
+    font-size: 1.5rem;
+  }
+
+  .cta-container p {
+    font-size: 1rem;
+  }
+}
+
+/* Responsive Contact Form */
+@media screen and (max-width: 768px) {
+  #contact {
+    height: auto;
+    padding: 20px 0;
+  }
+
+  .contact-container {
+    padding: 0 15px;
   }
 
   .contact-form {
+    width: 100%;
     padding: 20px;
+  }
+
+  .form-group input,
+  .form-group textarea {
+    width: 100%;
   }
 }
 
-@media (max-width: 768px) {
+/* Responsive Footer */
+@media screen and (max-width: 768px) {
   .footer-container {
     flex-direction: column;
     align-items: center;
+    text-align: center;
+  }
+
+  .footer-container > div {
+    flex: 1 1 100%;
+    margin-bottom: 20px;
+  }
+
+  .footer-socials {
+    justify-content: center;
+  }
+}
+
+/* Fluid Typography */
+@media screen and (max-width: 768px) {
+  /* Responsive type scale */
+  h1 {
+    font-size: clamp(2rem, 7vw, 3rem);
+  }
+
+  h2 {
+    font-size: clamp(1.5rem, 6vw, 2.5rem);
+  }
+
+  h3 {
+    font-size: clamp(1.2rem, 5vw, 1.8rem);
+  }
+}
+
+/* Responsive Images */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Accessibility and Touch Improvements */
+@media (max-width: 768px) {
+  /* Increase touch target sizes */
+  .navbar-links a,
+  .cta-button,
+  .contact-submit,
+  .footer-socials a {
+    min-height: 44px;
+    min-width: 44px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+  }
+}
+
+/* Media Queries for Different Device Sizes */
+/* Small devices (landscape phones, 576px and up) */
+@media screen and (min-width: 576px) and (max-width: 768px) {
+  /* Add specific adjustments for small devices if needed */
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media screen and (min-width: 768px) and (max-width: 992px) {
+  /* Tablet-specific adjustments */
+  .services-container {
     gap: 20px;
+  }
+
+  .service {
+    width: calc(50% - 20px);
   }
 }
