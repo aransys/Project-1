@@ -146,7 +146,7 @@ body {
 }
 
 .hero-buttons .btn-primary {
-  background-color: #0073e6;
+  background-color: #0a6887;
   color: white;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   border: 2px solid transparent;
@@ -167,7 +167,8 @@ body {
 }
 
 .hero-buttons .btn-primary:hover {
-  background-color: #005ac3;
+  background-color: #0a6887;
+  color: white;
 }
 
 .hero-buttons .btn-secondary:hover {
