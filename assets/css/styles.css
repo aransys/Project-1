@@ -394,18 +394,19 @@ body {
   text-align: center;
 }
 
+/* Container for the footer sections */
 .footer-container {
   display: flex;
-  flex-wrap: wrap;
   justify-content: space-between;
-  max-width: 1200px;
-  width: 100%;
   gap: 30px;
+  flex-wrap: wrap;
+  width: 100%;
 }
 
+/* Individual footer section (About Us, Quick Links, Contact, etc.) */
 .footer-container > div {
-  flex: 1 1 calc(25% - 30px); /* Responsive grid layout */
-  min-width: 200px;
+  flex: 1 1 calc(25% - 30px); /* Equal width for each section */
+  min-width: 200px; /* Ensure each section has a minimum width */
 }
 
 .footer h3 {
@@ -426,7 +427,7 @@ body {
 }
 
 .footer ul li {
-  margin: 10px 0; /* Space between list items */
+  margin: 10px 0;
 }
 
 .footer ul li a {
@@ -460,20 +461,24 @@ body {
   text-decoration: none;
 }
 
+/* Social media icons */
 .footer-socials {
   display: flex;
   justify-content: center;
-  gap: 5px; /* Space between icons */
-  width: 100%; /* Full width */
-  flex-wrap: wrap; /* Allow wrapping on smaller screens */
-  text-align: center; /* Center align content */
-  margin-top: 10px; /* Add some space above icons if needed */
+  gap: 15px; /* Space between icons */
+  flex-wrap: wrap; /* Allow icons to wrap on smaller screens */
+  width: 100%; /* Take full width */
 }
 
 .footer-socials .follow-us {
-  white-space: nowrap; /* Prevent text breaking */
-  font-size: 1.2rem; /* Adjust font size as needed */
-  margin-bottom: 5px; /* Reduced spacing between "Follow Us" text and icons */
+  font-size: 1.2rem;
+  margin-bottom: 10px; /* Space between text and social icons */
+  color: white; /* White color for text */
+  text-align: center; /* Center the "Follow Us" text */
+  display: flex; /* Make it a flex container */
+  flex-direction: column; /* Stack text and icons vertically */
+  justify-content: center; /* Vertically center the text and icons */
+  align-items: center; /* Horizontally center */
 }
 
 .footer-socials a {
@@ -496,6 +501,7 @@ body {
   outline-offset: 2px;
 }
 
+/* Footer Bottom */
 .footer-bottom {
   margin-top: 20px;
   font-size: 0.8rem;
