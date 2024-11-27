@@ -89,13 +89,38 @@ body {
 }
 
 /* Main Styles */
+/* Hero section */
+.hero-section {
+  position: relative; /* Establish stacking context for child elements like overlay */
+  z-index: 1; /* Set lower z-index to ensure it stays beneath the overlay */
+  padding: 100px 20px;
+  text-align: center;
+  background: url("/assets/images/washing.jpg") no-repeat center center;
+  background-size: cover;
+  min-height: 100vh; /* Ensures hero section takes the full viewport height */
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Hero content should sit above the overlay */
+.hero-content {
+  position: relative;
+  z-index: 3; /* Ensure content stays above the overlay */
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
 /* Hero section buttons styles */
 .hero-buttons {
   display: flex;
-  justify-content: center; /* Center the buttons */
-  gap: 15px; /* Space between buttons */
-  margin-top: 20px; /* Spacing from the hero content */
-  z-index: 3; /* Buttons stay above the overlay */
+  justify-content: center;
+  gap: 15px;
+  margin-top: 40px;
+  z-index: 4; /* Ensure buttons are above the overlay */
 }
 
 .hero-buttons .btn {
@@ -109,14 +134,14 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  flex: 1; /* Ensures equal width for both buttons */
-  width: 0; /* Prevent stretching beyond equal width */
-  z-index: 3; /* Ensure the buttons are on top */
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  flex: 1;
+  z-index: 4; /* Ensure buttons are above the overlay */
 }
 
 .hero-buttons .btn a {
   display: block;
-  width: 100%; /* Ensure anchor fills the entire button */
+  width: 100%;
   text-decoration: none;
   color: inherit;
   text-align: center;
@@ -135,47 +160,23 @@ body {
 
 .hero-buttons .btn:hover {
   background-color: #007bb5;
-  transform: scale(1.05);
+  transform: scale(1.02);
 }
 
-.hero-buttons:focus {
+.hero-buttons .btn:focus {
   outline: 3px solid #98deff;
   outline-offset: 3px;
 }
 
 /* Overlay styles */
 .hero-overlay {
-  position: absolute; /* Position it relative to the hero section */
+  position: absolute; /* Position it inside the hero section */
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent dark overlay */
-  z-index: 1; /* Overlay stays below the buttons */
-}
-
-/* Ensure hero section is visible */
-.hero-section {
-  position: relative; /* Position relative to ensure overlay and buttons are placed accordingly */
-  z-index: 5; /* Ensure it stays above the overlay */
-  padding: 100px 20px; /* Padding to give content some space */
-  text-align: center;
-  background: url("/assets/images/washing.jpg") no-repeat center center;
-  background-size: cover;
-  min-height: 100vh; /* Ensures hero section takes the full viewport height */
-  color: white; /* Ensures text color contrasts well with the background */
-  display: flex; /* Use flexbox to align content */
-  flex-direction: column; /* Stack content vertically */
-  justify-content: center; /* Vertically center the content */
-  align-items: center; /* Center horizontally */
-}
-
-.hero-content {
-  position: relative; /* Make sure content stays above the overlay */
-  z-index: 2;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay */
+  z-index: 2; /* Place overlay below buttons and content */
 }
 
 /* Services section */
