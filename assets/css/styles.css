@@ -1053,202 +1053,177 @@ body {
   }
 }
 
-/* Responsive Styles */
-@media screen and (max-width: 768px) {
+/* Responsive styles */
+/* Base Breakpoints */
+:root {
+  --breakpoint-sm: 576px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 992px;
+  --breakpoint-xl: 1200px;
+}
+
+/* Mobile First Approach */
+@media screen and (min-width: 320px) {
+  /* Base Mobile Styles */
+  :root {
+    --space-xl: 2rem;
+    --space-lg: 1.5rem;
+    --space-md: 1rem;
+    --space-sm: 0.75rem;
+  }
+
+  /* Typography Scale */
+  h1 {
+    font-size: clamp(2rem, 5vw + 1rem, 3.5rem);
+  }
+  h2 {
+    font-size: clamp(1.5rem, 4vw + 0.5rem, 2.5rem);
+  }
+  h3 {
+    font-size: clamp(1.2rem, 3vw + 0.5rem, 1.8rem);
+  }
+  p {
+    font-size: clamp(1rem, 2vw + 0.3rem, 1.2rem);
+  }
+
+  /* Layout */
+  .container {
+    padding: 0 var(--space-md);
+  }
+
+  /* Navigation */
   .navbar {
-    padding: 10px;
-    flex-direction: column;
-    position: relative;
+    padding: var(--space-sm);
+    height: auto;
   }
 
   .navbar-brand {
-    margin-bottom: 15px;
-  }
-
-  .navbar-center {
-    width: 100%;
+    margin-bottom: var(--space-sm);
   }
 
   .navbar-links {
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
+    gap: var(--space-sm);
   }
 
-  .navbar-links li {
-    width: 100%;
-    text-align: center;
+  /* Sections */
+  .hero-section,
+  .services-background,
+  #pricing,
+  #contact {
+    padding: var(--space-lg) var(--space-md);
+    min-height: 100svh;
   }
 
-  .navbar-links a {
-    display: block;
-    padding: 10px;
+  /* Components */
+  .service,
+  .pricing-item,
+  .contact-form {
     width: 100%;
+    margin-bottom: var(--space-md);
   }
 }
 
-/* Responsive Hero Section */
-@media screen and (max-width: 768px) {
-  #hero {
-    padding: 0 15px;
-    text-align: center;
-  }
-
-  #hero h1 {
-    font-size: 2rem;
-    margin-bottom: 15px;
-  }
-
-  #hero p {
-    font-size: 1rem;
-    max-width: 100%;
-  }
-}
-
-/* Responsive Services Section */
-@media screen and (max-width: 768px) {
-  .services-background {
-    padding: 20px;
-    height: auto;
+@media screen and (min-width: 576px) {
+  :root {
+    --space-xl: 2.5rem;
+    --space-lg: 2rem;
   }
 
   .services-container {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .service {
-    width: 100%;
-    max-width: 350px;
-    margin-bottom: 20px;
-  }
-
-  .services-background h2 {
-    font-size: 2rem;
-    margin-bottom: 20px;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-md);
   }
 }
 
-/* Responsive CTA */
-@media screen and (max-width: 768px) {
-  .cta-container {
-    padding: 20px;
-    margin: 20px 0;
+@media screen and (min-width: 768px) {
+  :root {
+    --space-xl: 3rem;
+    --space-lg: 2.5rem;
   }
 
-  .cta-container h3 {
-    font-size: 1.5rem;
+  .navbar {
+    flex-direction: row;
+    padding: var(--space-md) var(--space-lg);
   }
 
-  .cta-container p {
-    font-size: 1rem;
-  }
-}
-
-/* Responsive Pricing Table */
-@media (max-width: 768px) {
-  .pricing-table {
-    flex-direction: column;
-    align-items: center;
+  .navbar-brand {
+    margin-bottom: 0;
   }
 
-  .pricing-item {
-    max-width: 90%;
-  }
-}
-
-/* Responsive Contact Form */
-@media screen and (max-width: 768px) {
-  #contact {
-    height: auto;
-    padding: 20px 0;
+  .navbar-links {
+    flex-direction: row;
+    gap: var(--space-md);
   }
 
-  .contact-container {
-    padding: 0 15px;
+  .services-container {
+    grid-template-columns: repeat(3, 1fr);
   }
 
-  .contact-form {
-    width: 100%;
-    padding: 20px;
-  }
-
-  .form-group input,
-  .form-group textarea {
-    width: 100%;
+  .contact-wrapper {
+    grid-template-columns: 1fr 2fr;
   }
 }
 
-/* Responsive Footer */
-@media screen and (max-width: 768px) {
-  .footer-container {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
+@media screen and (min-width: 992px) {
+  :root {
+    --space-xl: 4rem;
+    --space-lg: 3rem;
   }
 
-  .footer-container > div {
-    flex: 1 1 100%;
-    margin-bottom: 20px;
+  .container {
+    max-width: 1140px;
+    margin: 0 auto;
   }
 
-  .footer-socials {
-    justify-content: center;
+  .services-container {
+    gap: var(--space-lg);
   }
 }
 
-/* Fluid Typography */
-@media screen and (max-width: 768px) {
-  /* Responsive type scale */
-  h1 {
-    font-size: clamp(2rem, 7vw, 3rem);
-  }
-
-  h2 {
-    font-size: clamp(1.5rem, 6vw, 2.5rem);
-  }
-
-  h3 {
-    font-size: clamp(1.2rem, 5vw, 1.8rem);
-  }
-}
-
-/* Responsive Images */
-img {
-  max-width: 100%;
-  height: auto;
-}
-
-/* Accessibility and Touch Improvements */
-@media (max-width: 768px) {
-  /* Increase touch target sizes */
+/* Touch Device Optimization */
+@media (hover: none) {
   .navbar-links a,
   .cta-button,
   .contact-submit,
   .footer-socials a {
-    min-height: 44px;
-    min-width: 44px;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    padding: 10px;
+    --touch-target: 44px;
+    min-height: var(--touch-target);
+    min-width: var(--touch-target);
+    padding: var(--space-sm) var(--space-md);
   }
 }
 
-/* Media Queries for Different Device Sizes */
-/* Small devices (landscape phones, 576px and up) */
-@media screen and (min-width: 576px) and (max-width: 768px) {
-  /* Add specific adjustments for small devices if needed */
+/* High Resolution Screens */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  html {
+    font-smoothing: antialiased;
+    -webkit-font-smoothing: antialiased;
+  }
 }
 
-/* Medium devices (tablets, 768px and up) */
-@media screen and (min-width: 768px) and (max-width: 992px) {
-  /* Tablet-specific adjustments */
-  .services-container {
-    gap: 20px;
+/* Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation: none !important;
+    transition: none !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Print Styles */
+@media print {
+  * {
+    background: transparent !important;
+    color: #000 !important;
+    box-shadow: none !important;
+    text-shadow: none !important;
   }
 
-  .service {
-    width: calc(50% - 20px);
+  a[href]::after {
+    content: " (" attr(href) ")";
+  }
+
+  @page {
+    margin: 0.5cm;
   }
 }
