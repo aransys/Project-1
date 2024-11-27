@@ -713,40 +713,103 @@ body {
 
 /* Footer Section */
 .footer {
+  position: relative;
+  background: linear-gradient(180deg, #f8f9fa 0%, #e9ecef 100%);
+  color: #333;
+  margin-top: 4rem;
+}
+
+.footer-wave {
+  position: absolute;
+  top: -100px;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  overflow: hidden;
+}
+
+.footer-wave svg {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.footer-content {
+  position: relative;
   background-color: #0a6887;
   color: white;
-  padding: 40px 20px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
+  padding: 4rem 2rem 0;
 }
 
-/* Container for the footer sections */
 .footer-container {
-  display: flex;
-  justify-content: space-between;
-  gap: 30px;
-  flex-wrap: wrap;
-  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 3rem;
 }
 
-/* Individual footer section (About Us, Quick Links, Contact, etc.) */
-.footer-container > div {
-  flex: 1 1 calc(25% - 30px); /* Equal width for each section */
-  min-width: 200px; /* Ensure each section has a minimum width */
+.footer-logo {
+  height: 60px;
+  margin-bottom: 1.5rem;
 }
 
 .footer h3 {
-  font-size: 1.5rem;
-  margin-bottom: 15px;
-  text-transform: uppercase;
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  position: relative;
+  padding-bottom: 0.5rem;
 }
 
-.footer p,
-.footer ul {
-  font-size: 0.9rem;
-  line-height: 1.6;
+.footer h3::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 50px;
+  height: 2px;
+  background: #98deff;
+}
+
+.footer-newsletter {
+  margin-top: 2rem;
+}
+
+.footer-newsletter h4 {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+
+.newsletter-form {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.newsletter-form input {
+  flex: 1;
+  padding: 0.8rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 4px;
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+}
+
+.newsletter-form button {
+  padding: 0.8rem 1.5rem;
+  background: #98deff;
+  color: #0a6887;
+  border: none;
+  border-radius: 4px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.newsletter-form button:hover {
+  background: #7ac9ea;
+  transform: translateY(-2px);
 }
 
 .footer ul {
@@ -755,89 +818,169 @@ body {
 }
 
 .footer ul li {
-  margin: 10px 0;
+  margin-bottom: 0.8rem;
 }
 
 .footer ul li a {
-  position: relative;
-  color: white;
+  color: rgba(255, 255, 255, 0.8);
   text-decoration: none;
-  transition: color 0.3s ease;
+  transition: all 0.3s ease;
+  display: inline-block;
 }
 
-.footer ul li a::after {
+.footer ul li a span {
+  position: relative;
+  display: inline-block;
+}
+
+.footer ul li a span::after {
   content: "";
   position: absolute;
-  bottom: 0;
+  width: 100%;
+  transform: scaleX(0);
+  height: 1px;
+  bottom: -2px;
   left: 0;
-  width: 0;
-  height: 2px;
   background-color: #98deff;
-  transition: width 0.3s ease;
+  transform-origin: bottom right;
+  transition: transform 0.3s ease;
 }
 
 .footer ul li a:hover {
   color: #98deff;
 }
 
-.footer ul li a:hover::after {
-  width: 100%;
+.footer ul li a:hover span::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
 }
 
-.footer-contact a {
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.contact-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.contact-item i {
   color: #98deff;
-  text-decoration: none;
+  font-size: 1.2rem;
+  margin-top: 0.2rem;
 }
 
-/* Social media icons */
+.contact-item p {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.contact-item a {
+  color: inherit;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.contact-item a:hover {
+  color: #98deff;
+}
+
 .footer-socials {
   display: flex;
-  justify-content: center;
-  gap: 15px; /* Space between icons */
-  flex-wrap: wrap; /* Allow icons to wrap on smaller screens */
-  width: 100%; /* Take full width */
-}
-
-.footer-socials .follow-us {
-  font-size: 1.2rem;
-  margin-bottom: 10px; /* Space between text and social icons */
-  color: white; /* White color for text */
-  text-align: center; /* Center the "Follow Us" text */
-  display: flex; /* Make it a flex container */
-  flex-direction: column; /* Stack text and icons vertically */
-  justify-content: center; /* Vertically center the text and icons */
-  align-items: center; /* Horizontally center */
+  gap: 1rem;
+  margin-top: 1.5rem;
 }
 
 .footer-socials a {
-  color: #fff;
-  font-size: 30px;
-  text-decoration: none;
-  transition: transform 0.3s ease, color 0.3s ease;
-  background-color: #0a6887;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background: rgba(255, 255, 255, 0.1);
   border-radius: 50%;
-  padding: 15px;
+  color: white;
+  text-decoration: none;
+  transition: all 0.3s ease;
 }
 
 .footer-socials a:hover {
-  color: #fff;
-  transform: scale(1.15);
+  background: #98deff;
+  color: #0a6887;
+  transform: translateY(-3px);
 }
 
-.footer-socials a:focus-visible {
-  outline: 3px solid #98deff;
-  outline-offset: 2px;
-}
-
-/* Footer Bottom */
 .footer-bottom {
-  margin-top: 20px;
-  font-size: 0.8rem;
-  color: #ccc;
+  background: rgba(0, 0, 0, 0.1);
+  padding: 1.5rem 0;
+  margin-top: 4rem;
+}
+
+.footer-bottom-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 2rem;
 }
 
 .footer-bottom p {
   margin: 0;
+  font-size: 0.9rem;
+}
+
+.footer-bottom-links {
+  display: flex;
+  gap: 2rem;
+}
+
+.footer-bottom-links a {
+  color: rgba(255, 255, 255, 0.8);
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: color 0.3s ease;
+}
+
+.footer-bottom-links a:hover {
+  color: #98deff;
+}
+
+@media (max-width: 768px) {
+  .footer-container {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .footer h3::after {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .newsletter-form {
+    flex-direction: column;
+  }
+
+  .contact-item {
+    justify-content: center;
+  }
+
+  .footer-socials {
+    justify-content: center;
+  }
+
+  .footer-bottom-content {
+    flex-direction: column;
+    gap: 1rem;
+    text-align: center;
+  }
+
+  .footer-bottom-links {
+    justify-content: center;
+  }
 }
 
 /* Hamburger Menu Styles */
