@@ -339,8 +339,8 @@ body {
   font-weight: bold;
   text-decoration: none;
   color: #fff;
-  background-color: #98deff;
-  border: none;
+  background-color: #5fc0ec;
+  border: 1px solid #ccc;
   border-radius: 5px;
   cursor: pointer;
   transition: background-color 0.3s ease, transform 0.2s ease;
