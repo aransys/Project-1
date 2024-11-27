@@ -174,22 +174,70 @@
       <section id="contact">
         <div class="contact-container">
           <h2>Contact Us</h2>
-          <p>We'd love to hear from you. Send us a message!</p>
-          <form class="contact-form" action="#" method="post" aria-label="Contact Form">
-            <div class="form-group">
-              <label for="name">Name</label>
-              <input type="text" id="name" name="name" placeholder="Your Full Name" required />
+          <p>We'd love to hear from you</p>
+
+          <div class="contact-wrapper">
+            <div class="contact-info">
+              <div class="info-item">
+                <i class="contact-icon">📍</i>
+                <div>
+                  <h3>Visit Us</h3>
+                  <p>123 Laundry Lane<br />City, State 12345</p>
+                </div>
+              </div>
+              <div class="info-item">
+                <i class="contact-icon">📞</i>
+                <div>
+                  <h3>Call Us</h3>
+                  <p>(555) 123-4567</p>
+                </div>
+              </div>
+              <div class="info-item">
+                <i class="contact-icon">✉️</i>
+                <div>
+                  <h3>Email Us</h3>
+                  <p>hello@laundryservice.com</p>
+                </div>
+              </div>
             </div>
-            <div class="form-group">
-              <label for="email">Email</label>
-              <input type="email" id="email" name="email" placeholder="Your Email Address" required />
-            </div>
-            <div class="form-group">
-              <label for="message">Message</label>
-              <textarea id="message" name="message" rows="5" placeholder="Your Message" required></textarea>
-            </div>
-            <button type="submit" class="contact-submit">Send Message</button>
-          </form>
+
+            <form class="contact-form" action="#" method="post" aria-label="Contact Form">
+              <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" placeholder="Your Full Name" required pattern="[A-Za-z\s]+" title="Please enter a valid name" />
+                <span class="error-message">Please enter a valid name</span>
+              </div>
+
+              <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="Your Email Address" required />
+                <span class="error-message">Please enter a valid email address</span>
+              </div>
+
+              <div class="form-group">
+                <label for="subject">Subject</label>
+                <select id="subject" name="subject" required>
+                  <option value="">Select a subject</option>
+                  <option value="general">General Inquiry</option>
+                  <option value="pricing">Pricing Question</option>
+                  <option value="service">Service Issue</option>
+                  <option value="other">Other</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="message">Message</label>
+                <textarea id="message" name="message" rows="5" placeholder="Your Message" required minlength="10"></textarea>
+                <span class="error-message">Message must be at least 10 characters</span>
+                <div class="character-count">0/500</div>
+              </div>
+
+              <button type="submit" class="contact-submit">
+                <span>Send Message</span>
+                <div class="submit-loader"></div>
+              </button>
+            </form>
+          </div>
         </div>
       </section>
     </main>

@@ -17,18 +17,21 @@ window.addEventListener("scroll", function () {
 });
 
 // Select the form and the button
-const contactForm = document.getElementById("contact");
+document.querySelector(".contact-form").addEventListener("submit", function (e) {
+  e.preventDefault();
+  const button = this.querySelector(".contact-submit");
+  button.classList.add("loading");
 
-// Add a submit event listener
-contactForm.addEventListener("submit", function (event) {
-  // Prevent the default form submission
-  event.preventDefault();
+  // Simulate form submission
+  setTimeout(() => {
+    button.classList.remove("loading");
+    // Add success message or redirect
+  }, 2000);
+});
 
-  // Simulate a success prompt
-  alert("Thank you for your message! We will get back to you soon.");
-
-  // Optionally, clear the form fields
-  contactForm.reset();
+document.querySelector("#message").addEventListener("input", function () {
+  const count = this.value.length;
+  this.nextElementSibling.nextElementSibling.textContent = `${count}/500`;
 });
 
 // Hamburger menu
