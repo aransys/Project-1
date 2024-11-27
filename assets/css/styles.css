@@ -426,17 +426,33 @@ body {
 }
 
 .footer ul li {
-  margin: 10px 0;
+  margin: 10px 0; /* Space between list items */
 }
 
 .footer ul li a {
+  position: relative;
   color: white;
   text-decoration: none;
-  transition: color 0.3s;
+  transition: color 0.3s ease;
+}
+
+.footer ul li a::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #98deff;
+  transition: width 0.3s ease;
 }
 
 .footer ul li a:hover {
   color: #98deff;
+}
+
+.footer ul li a:hover::after {
+  width: 100%;
 }
 
 .footer-contact a {
@@ -447,16 +463,17 @@ body {
 .footer-socials {
   display: flex;
   justify-content: center;
-  gap: 20px;
-  width: 100%; /* Make sure the container is full-width */
-  flex-wrap: wrap; /* Allow items to wrap on smaller screens */
-  text-align: center; /* Center align the content */
+  gap: 5px; /* Space between icons */
+  width: 100%; /* Full width */
+  flex-wrap: wrap; /* Allow wrapping on smaller screens */
+  text-align: center; /* Center align content */
+  margin-top: 10px; /* Add some space above icons if needed */
 }
 
 .footer-socials .follow-us {
-  white-space: nowrap; /* Prevent text from breaking into two lines */
+  white-space: nowrap; /* Prevent text breaking */
   font-size: 1.2rem; /* Adjust font size as needed */
-  margin-bottom: 10px; /* Add space at the bottom if needed */
+  margin-bottom: 5px; /* Reduced spacing between "Follow Us" text and icons */
 }
 
 .footer-socials a {
