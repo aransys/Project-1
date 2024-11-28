@@ -593,12 +593,13 @@ body {
 .contact-wrapper {
   display: grid;
   grid-template-columns: 1fr 2fr;
-  gap: 2rem; /* Reduced gap */
-  background: rgba(255, 255, 255, 0.95);
+  gap: 3rem;
+  background: rgba(255, 255, 255, 0.98); /* Slightly more opaque */
   border-radius: 15px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
   overflow: hidden;
-  max-height: calc(100vh - 8rem); /* Set maximum height */
+  max-height: calc(100vh - 8rem);
+  /* Enhanced shadow effect */
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3), /* Large soft shadow */ 0 10px 20px rgba(0, 0, 0, 0.1), /* Medium shadow */ 0 0 0 1px rgba(255, 255, 255, 0.2); /* Subtle border */
 }
 
 .contact-info {
@@ -1280,5 +1281,11 @@ body {
 
   @page {
     margin: 0.5cm;
+  }
+}
+
+@media (max-width: 768px) {
+  .contact-wrapper {
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15), 0 5px 15px rgba(0, 0, 0, 0.1), 0 0 0 1px rgba(255, 255, 255, 0.2);
   }
 }
