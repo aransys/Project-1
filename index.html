@@ -44,27 +44,25 @@
 
   <body>
     <!-- Header -->
-    <header>
-      <nav class="navbar" aria-label="Main Navigation">
-        <a href="#hero" class="navbar-brand">
-          <img src="../assets/images/logo.svg" alt="Worcester Laundry Logo" />
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    <header class="header">
+      <nav class="navbar" aria-label="Main navigation">
+        <a href="/" class="navbar-brand" aria-label="Worcester Laundry Home">
+          <img src="../assets/images/logo.svg" alt="Worcester Laundry Logo" width="40" height="40" />
         </a>
 
-        <!-- Hamburger Menu Button -->
-        <div class="hamburger-menu" aria-label="Toggle Navigation">
+        <button class="hamburger" aria-label="Toggle menu" aria-expanded="false">
           <span></span>
           <span></span>
           <span></span>
-        </div>
+        </button>
 
-        <div class="navbar-center">
-          <ul class="navbar-links">
-            <li><a href="#hero">Home</a></li>
-            <li><a href="#services">Services</a></li>
-            <li><a href="#contact">Contact</a></li>
-            <li><a href="#pricing">Prices</a></li>
-          </ul>
-        </div>
+        <ul class="navbar-menu" role="menu">
+          <li role="none"><a href="#hero" role="menuitem">Home</a></li>
+          <li role="none"><a href="#services" role="menuitem">Services</a></li>
+          <li role="none"><a href="#contact" role="menuitem">Contact</a></li>
+          <li role="none"><a href="#pricing" role="menuitem">Prices</a></li>
+        </ul>
       </nav>
     </header>
 
