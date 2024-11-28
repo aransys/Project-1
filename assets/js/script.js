@@ -35,36 +35,54 @@ document.querySelector("#message").addEventListener("input", function () {
 });
 
 // Hamburger menu
-// document.addEventListener("DOMContentLoaded", () => {
-//   const hamburgerMenu = document.querySelector(".hamburger-menu");
-//   const navbarCenter = document.querySelector(".navbar-center");
+// Get the necessary elements
+const hamburger = document.querySelector(".hamburger");
+const navMenu = document.querySelector(".navbar-menu");
+const header = document.querySelector(".header");
 
-//   hamburgerMenu.addEventListener("click", () => {
-//     // Toggle active class on hamburger and navbar
-//     hamburgerMenu.classList.toggle("active");
-//     navbarCenter.classList.toggle("active");
+// Toggle menu function
+function toggleMenu() {
+  hamburger.classList.toggle("active");
+  navMenu.classList.toggle("active");
+  hamburger.setAttribute("aria-expanded", hamburger.classList.contains("active"));
+}
 
-//     // Accessibility: Toggle aria-expanded
-//     const isExpanded = hamburgerMenu.classList.contains("active");
-//     hamburgerMenu.setAttribute("aria-expanded", isExpanded);
-//   });
+// Add click event to hamburger
+hamburger.addEventListener("click", toggleMenu);
 
-//   // Close menu when a link is clicked
-//   document.querySelectorAll(".navbar-links a").forEach((link) => {
-//     link.addEventListener("click", () => {
-//       hamburgerMenu.classList.remove("active");
-//       navbarCenter.classList.remove("active");
-//     });
-//   });
+// Close menu when clicking on a link
+document.querySelectorAll(".navbar-menu a").forEach((link) => {
+  link.addEventListener("click", () => {
+    hamburger.classList.remove("active");
+    navMenu.classList.remove("active");
+    hamburger.setAttribute("aria-expanded", "false");
+  });
+});
 
-//   // Close menu if clicked outside
-//   document.addEventListener("click", (event) => {
-//     const isClickInsideNav = navbarCenter.contains(event.target);
-//     const isClickHamburger = hamburgerMenu.contains(event.target);
+// Hide menu when clicking outside
+document.addEventListener("click", (e) => {
+  if (!hamburger.contains(e.target) && !navMenu.contains(e.target)) {
+    hamburger.classList.remove("active");
+    navMenu.classList.remove("active");
+    hamburger.setAttribute("aria-expanded", "false");
+  }
+});
 
-//     if (!isClickInsideNav && !isClickHamburger && navbarCenter.classList.contains("active")) {
-//       hamburgerMenu.classList.remove("active");
-//       navbarCenter.classList.remove("active");
-//     }
-//   });
-// });
+// Hide/show header on scroll
+let lastScroll = 0;
+window.addEventListener("scroll", () => {
+  const currentScroll = window.pageYOffset;
+  if (currentScroll <= 0) {
+    header.classList.remove("scroll-up");
+    return;
+  }
+
+  if (currentScroll > lastScroll && !header.classList.contains("scroll-down")) {
+    header.classList.remove("scroll-up");
+    header.classList.add("scroll-down");
+  } else if (currentScroll < lastScroll && header.classList.contains("scroll-down")) {
+    header.classList.remove("scroll-down");
+    header.classList.add("scroll-up");
+  }
+  lastScroll = currentScroll;
+});
