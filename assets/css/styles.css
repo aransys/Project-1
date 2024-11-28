@@ -93,13 +93,13 @@ body {
 .hero-section {
   position: relative;
   min-height: 100vh;
-  height: 100vh; /* Force full height */
+  height: 100vh;
   padding: clamp(3rem, 10vh, 8rem) 1.25rem;
   background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("/assets/images/washing.jpg");
-  background-position: top center; /* Changed to top center */
+  background-position: top center;
   background-size: cover;
   background-repeat: no-repeat;
-  background-attachment: fixed; /* Makes the background fixed while scrolling */
+  background-attachment: fixed;
   color: #ffffff;
   display: grid;
   place-items: center;
@@ -145,9 +145,9 @@ body {
 .btn {
   position: relative;
   flex: 1;
-  width: 200px; /* Set fixed width */
-  max-width: 250px; /* Maximum width */
-  min-width: 200px; /* Minimum width */
+  width: 200px;
+  max-width: 250px;
+  min-width: 200px;
   padding: 1rem 2rem;
   border-radius: 8px;
   font-weight: 600;
@@ -156,7 +156,7 @@ body {
   letter-spacing: 0.5px;
   transition: all 0.3s ease;
   overflow: hidden;
-  white-space: nowrap; /* Prevent text wrapping */
+  white-space: nowrap;
   display: inline-flex;
   justify-content: center;
   align-items: center;
@@ -210,6 +210,41 @@ body {
   z-index: 1;
 }
 
+/* Scroll Arrow Styles */
+.scroll-arrow {
+  position: absolute;
+  bottom: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  cursor: pointer;
+  z-index: 2;
+}
+
+.arrow {
+  width: 30px;
+  height: 30px;
+  border-right: 3px solid #ffffff;
+  border-bottom: 3px solid #ffffff;
+  transform: rotate(45deg);
+  animation: bounce 2s infinite;
+  opacity: 0.8;
+}
+
+@keyframes bounce {
+  0% {
+    transform: rotate(45deg) translate(0, 0);
+    opacity: 0.8;
+  }
+  50% {
+    transform: rotate(45deg) translate(10px, 10px);
+    opacity: 0.5;
+  }
+  100% {
+    transform: rotate(45deg) translate(0, 0);
+    opacity: 0.8;
+  }
+}
+
 /* Responsive adjustments */
 @media (max-width: 768px) {
   .hero-buttons {
@@ -220,6 +255,16 @@ body {
   .btn {
     width: 100%;
     max-width: 100%;
+  }
+
+  .scroll-arrow {
+    display: none;
+  }
+}
+
+@media (max-height: 600px) {
+  .scroll-arrow {
+    display: none;
   }
 }
 
@@ -236,6 +281,10 @@ body {
   }
 
   .hero-buttons {
+    display: none;
+  }
+
+  .scroll-arrow {
     display: none;
   }
 }
