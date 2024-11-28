@@ -668,6 +668,58 @@ body {
   resize: none; /* Prevent resizing */
 }
 
+.contact-submit {
+  width: 100%;
+  padding: 1rem;
+  font-size: 1rem;
+  font-weight: 600;
+  color: white;
+  background: #0a6887;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  transition: all 0.3s ease;
+  margin-top: 1rem;
+}
+
+.contact-submit:hover {
+  background: #085670;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(10, 104, 135, 0.2);
+}
+
+.contact-submit:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.submit-loader {
+  display: none;
+  width: 20px;
+  height: 20px;
+  border: 2px solid #fff;
+  border-top: 2px solid transparent;
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.contact-submit.loading .submit-loader {
+  display: block;
+}
+
 /* Responsive adjustments */
 @media (max-width: 768px) {
   #contact {
