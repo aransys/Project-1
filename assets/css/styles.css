@@ -93,11 +93,13 @@ body {
 .hero-section {
   position: relative;
   min-height: 100vh;
+  height: 100vh; /* Force full height */
   padding: clamp(3rem, 10vh, 8rem) 1.25rem;
   background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("/assets/images/washing.jpg");
-  background-position: center;
+  background-position: top center; /* Changed to top center */
   background-size: cover;
   background-repeat: no-repeat;
+  background-attachment: fixed; /* Makes the background fixed while scrolling */
   color: #ffffff;
   display: grid;
   place-items: center;
