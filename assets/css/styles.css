@@ -209,6 +209,11 @@ body {
   overflow: hidden;
 }
 
+/* Add smooth scrolling to the whole page */
+html {
+  scroll-behavior: smooth;
+}
+
 /* Hero content container */
 .hero-content {
   position: relative;
@@ -321,6 +326,18 @@ body {
   transform: translateX(-50%);
   cursor: pointer;
   z-index: 2;
+  text-decoration: none;
+  padding: 20px;
+  outline: none;
+}
+
+.scroll-arrow:focus {
+  outline: none;
+}
+
+.scroll-arrow:focus .arrow {
+  outline: 3px solid #ffffff;
+  outline-offset: 2px;
 }
 
 .arrow {
