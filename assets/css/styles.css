@@ -205,41 +205,195 @@ body {
 .services-background {
   position: relative;
   background: linear-gradient(120deg, rgba(127, 193, 248, 0.9), rgba(72, 120, 171, 0.9));
-  min-height: 100vh;
+  height: 100vh; /* Changed from min-height to fixed height */
   width: 100%;
-  padding: 4rem 2rem;
+  padding: 2rem; /* Further reduced padding */
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 4rem;
+  gap: 1.5rem; /* Further reduced gap */
+  overflow: hidden;
+}
+
+/* Bubbles container */
+.bubbles {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Individual bubble styling */
+.bubble {
+  position: absolute;
+  bottom: -50px;
+  background: rgba(255, 255, 255, 0.2); /* Increased opacity from 0.1 to 0.2 */
+  border-radius: 50%;
+  animation: float 20s linear infinite;
+  pointer-events: none;
+  backdrop-filter: blur(1px); /* Added subtle blur effect */
+  border: 1px solid rgba(255, 255, 255, 0.3); /* Added subtle border */
+}
+
+/* Set different sizes and positions for bubbles */
+.bubble:nth-child(1) {
+  left: 10%;
+  width: 40px;
+  height: 40px;
+  animation-delay: 0s;
+}
+.bubble:nth-child(2) {
+  left: 20%;
+  width: 60px;
+  height: 60px;
+  animation-delay: 1s;
+  animation-duration: 18s;
+}
+.bubble:nth-child(3) {
+  left: 35%;
+  width: 30px;
+  height: 30px;
+  animation-delay: 2s;
+  animation-duration: 16s;
+}
+.bubble:nth-child(4) {
+  left: 50%;
+  width: 50px;
+  height: 50px;
+  animation-delay: 3s;
+  animation-duration: 22s;
+}
+.bubble:nth-child(5) {
+  left: 65%;
+  width: 35px;
+  height: 35px;
+  animation-delay: 4s;
+  animation-duration: 19s;
+}
+.bubble:nth-child(6) {
+  left: 80%;
+  width: 45px;
+  height: 45px;
+  animation-delay: 5s;
+  animation-duration: 21s;
+}
+.bubble:nth-child(7) {
+  left: 25%;
+  width: 55px;
+  height: 55px;
+  animation-delay: 6s;
+  animation-duration: 17s;
+}
+.bubble:nth-child(8) {
+  left: 40%;
+  width: 40px;
+  height: 40px;
+  animation-delay: 7s;
+  animation-duration: 20s;
+}
+.bubble:nth-child(9) {
+  left: 55%;
+  width: 30px;
+  height: 30px;
+  animation-delay: 8s;
+  animation-duration: 15s;
+}
+.bubble:nth-child(10) {
+  left: 70%;
+  width: 50px;
+  height: 50px;
+  animation-delay: 9s;
+  animation-duration: 23s;
+}
+.bubble:nth-child(11) {
+  left: 85%;
+  width: 35px;
+  height: 35px;
+  animation-delay: 10s;
+  animation-duration: 18s;
+}
+.bubble:nth-child(12) {
+  left: 15%;
+  width: 45px;
+  height: 45px;
+  animation-delay: 11s;
+  animation-duration: 21s;
+}
+.bubble:nth-child(13) {
+  left: 30%;
+  width: 40px;
+  height: 40px;
+  animation-delay: 12s;
+  animation-duration: 19s;
+}
+.bubble:nth-child(14) {
+  left: 45%;
+  width: 55px;
+  height: 55px;
+  animation-delay: 13s;
+  animation-duration: 17s;
+}
+.bubble:nth-child(15) {
+  left: 60%;
+  width: 30px;
+  height: 30px;
+  animation-delay: 14s;
+  animation-duration: 16s;
+}
+
+/* Bubble animation */
+@keyframes float {
+  0% {
+    transform: translateY(0) rotate(0);
+    opacity: 0;
+  }
+  10% {
+    opacity: 1; /* Increased opacity from 0.5 to 1 */
+  }
+  90% {
+    opacity: 1; /* Increased opacity from 0.5 to 1 */
+  }
+  100% {
+    transform: translateY(-100vh) rotate(360deg);
+    opacity: 0;
+  }
 }
 
 .services-background h2 {
-  font-size: 2.5rem;
+  font-size: 2.25rem;
   color: white;
   text-align: center;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem; /* Further reduced */
+  position: relative;
+  z-index: 2;
 }
 
 .services-container {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 2rem;
+  gap: 1.25rem; /* Further reduced gap */
   max-width: 1200px;
   width: 100%;
   margin: 0 auto;
+  position: relative;
+  z-index: 2;
+  flex: 1; /* Allow container to take available space */
 }
 
 .service {
   background: rgba(255, 255, 255, 0.95);
   border-radius: 12px;
-  padding: 2rem;
+  padding: 1.25rem; /* Further reduced padding */
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 1rem;
+  gap: 0.5rem; /* Further reduced gap */
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  height: min-content; /* Ensure cards take minimum height needed */
 }
 
 .service:hover {
@@ -248,22 +402,21 @@ body {
 }
 
 .service img {
-  width: 60px;
-  height: 60px;
-  margin-bottom: 0.5rem;
+  width: 45px; /* Further reduced size */
+  height: 45px; /* Further reduced size */
+  margin-bottom: 0.25rem;
 }
 
 .service h3 {
   color: #0a6887;
-  font-size: 1.4rem;
+  font-size: 1.3rem; /* Slightly reduced */
   margin: 0;
   text-align: center;
 }
 
 .service p {
-  color: #555;
-  font-size: 1rem;
-  line-height: 1.6;
+  font-size: 0.9rem;
+  line-height: 1.3;
   margin: 0;
   text-align: center;
 }
@@ -271,22 +424,24 @@ body {
 .cta-container {
   background-color: #0a6887;
   width: min(100%, 600px);
-  margin: 2rem auto;
-  padding: 3rem;
+  margin: 0 auto; /* Removed top/bottom margin */
+  padding: 1.5rem; /* Further reduced padding */
   border-radius: 16px;
   box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
   text-align: center;
   color: white;
+  position: relative;
+  z-index: 2;
 }
 
 .cta-container h3 {
-  font-size: 1.8rem;
-  margin-bottom: 1rem;
+  font-size: 1.4rem;
+  margin-bottom: 0.5rem;
 }
 
 .cta-container p {
-  font-size: 1.2rem;
-  margin-bottom: 2rem;
+  font-size: 1rem;
+  margin-bottom: 1rem;
   opacity: 0.9;
 }
 
@@ -294,7 +449,7 @@ body {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: 1rem 2rem;
+  padding: 0.875rem 1.75rem; /* Slightly reduced */
   font-size: 1.1rem;
   font-weight: 600;
   background-color: #5fc0ec;
@@ -315,21 +470,37 @@ body {
   .services-container {
     grid-template-columns: repeat(2, 1fr);
   }
+
+  .services-background {
+    height: auto; /* Allow scrolling on smaller screens */
+    min-height: 100vh;
+  }
 }
 
 @media (max-width: 768px) {
   .services-background {
-    padding: 3rem 1rem;
+    padding: 1.5rem 1rem;
   }
 
   .services-container {
     grid-template-columns: 1fr;
-    gap: 1.5rem;
+    gap: 1rem;
   }
 
   .cta-container {
-    padding: 2rem;
-    margin: 1rem;
+    padding: 1.25rem;
+    margin: 0 0.5rem;
+  }
+}
+
+/* For very tall screens */
+@media (min-height: 900px) {
+  .services-background {
+    gap: 2rem; /* Slightly increase gaps for taller screens */
+  }
+
+  .service {
+    padding: 1.5rem;
   }
 }
 
