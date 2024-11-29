@@ -2,31 +2,31 @@ Worcester Laundry Service Website 🌟
 A modern, responsive website designed for a professional laundry service business, featuring a clean design, intuitive navigation, and a full suite of features to enhance the user experience.
 
 
-#📋 FEATURES
+📋 FEATURES
 
-#🌐 Responsive Design
+🌐 Responsive Design
 - Fully responsive layout with a mobile-first approach.
 - Hamburger menu for seamless navigation on smaller screens.
 
-#⚡ Dynamic UI
+⚡ Dynamic UI
 - Animated hero section with call-to-action buttons.
 - Showcasing services with an animated bubble background and hover effects.
 
-#💸 Interactive Pricing
+💸 Interactive Pricing
 - Dynamic pricing tables with a highlighted popular plan.
 - Gradient animations for visual appeal.
 
-#📞 Contact & Engagement
+📞 Contact & Engagement
 - Interactive contact form with validation and a loading animation.
 - Newsletter subscription for staying updated.
 - Social media integration to connect with customers.
 
-#♿ Accessibility
+♿ Accessibility
 - ARIA labels and semantic HTML for better screen reader support.
 - Keyboard-friendly navigation and focus management.
 - Skip navigation link and WCAG-compliant color contrast.
 
-#🚀 Technologies Used
+🚀 Technologies Used
 - HTML5 for semantic and structured content.
 - CSS3 for custom animations, responsive design (Flexbox, Grid).
 - Vanilla JavaScript for interactivity.
@@ -35,9 +35,9 @@ A modern, responsive website designed for a professional laundry service busines
 
 
 
-# Worcester Laundry Service
+ Worcester Laundry Service
 
-#📂 PROJECT STRUCTURE
+📂 PROJECT STRUCTURE
 
 ```
 Worcester Laundry Service/
