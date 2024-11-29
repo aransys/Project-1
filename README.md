@@ -151,3 +151,27 @@ Open the index.html file in your favorite web browser.
 - Image lazy loading enabled
 - Optimized animations with reduced motion support
 - Touch-friendly mobile interactions
+
+# 🌟Dependencies & References
+
+## Core Technologies
+```
+• HTML5 (W3C Spec)
+• CSS3 (W3C Spec)
+• ECMAScript 2021
+```
+
+## External Resources
+```
+• Font Awesome v6.0.0-beta3
+• Google Fonts (Roboto)
+• ARIA Authoring Practices Guide
+```
+
+## Standards
+```
+• Material Design Guidelines
+• iOS Human Interface Guidelines
+• Google HTML/CSS Style Guide
+• Airbnb JavaScript Style Guide
+```
