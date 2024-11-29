@@ -202,3 +202,4 @@ This project is licensed under the MIT License.
 See the LICENSE file for more details.
 
 Feel free to copy, customize, or ask for further tweaks!
+Released under [MIT License](LICENSE)
