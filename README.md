@@ -197,3 +197,8 @@ Open the index.html file in your favorite web browser.
 👨‍💻 [Aurimas Ransys]
    Developer & Designer
 ```
+# 📜License
+This project is licensed under the MIT License.
+See the LICENSE file for more details.
+
+Feel free to copy, customize, or ask for further tweaks!
