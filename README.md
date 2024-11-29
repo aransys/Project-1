@@ -35,7 +35,13 @@ A modern, responsive website designed for a professional laundry service busines
 
 
 📂 PROJECT STRUCTURE
+# Worcester Laundry Service
+
+## Project Structure
+
+```
 Worcester Laundry Service/
+│
 ├── index.html
 ├── assets/
 │   ├── css/
@@ -45,9 +51,24 @@ Worcester Laundry Service/
 │   ├── images/
 │   │   ├── logo.svg
 │   │   ├── washing.jpg
-│   │   └── [service icons]
+│   │   └── service-icons/
 │   └── favicon/
+│
 └── README.md
+```
+
+## Overview
+
+This repository contains the website files for Worcester Laundry Service.
+
+## Directory Structure Details
+
+- `index.html`: Main entry point
+- `assets/`: Contains all static resources
+  - `css/`: Stylesheet files
+  - `js/`: JavaScript files
+  - `images/`: Image assets
+  - `favicon/`: Favicon files
 
 📖 SETUP INSTRUCTIONS
 Follow these steps to get the website up and running:
