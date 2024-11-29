@@ -7,6 +7,7 @@
 
 html {
   font-size: 16px; /* Base font size for responsive typography */
+  scroll-behavior: smooth; /* Add smooth scrolling to the whole page */
 }
 
 body {
@@ -209,11 +210,6 @@ body {
   overflow: hidden;
 }
 
-/* Add smooth scrolling to the whole page */
-html {
-  scroll-behavior: smooth;
-}
-
 /* Hero content container */
 .hero-content {
   position: relative;
@@ -413,13 +409,13 @@ html {
 .services-background {
   position: relative;
   background: linear-gradient(120deg, rgba(127, 193, 248, 0.9), rgba(72, 120, 171, 0.9));
-  height: 100vh; /* Changed from min-height to fixed height */
+  height: 100vh;
   width: 100%;
-  padding: 2rem; /* Further reduced padding */
+  padding: 2rem;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 1.5rem; /* Further reduced gap */
+  gap: 1.5rem;
   overflow: hidden;
 }
 
@@ -438,12 +434,12 @@ html {
 .bubble {
   position: absolute;
   bottom: -50px;
-  background: rgba(255, 255, 255, 0.2); /* Increased opacity from 0.1 to 0.2 */
+  background: rgba(255, 255, 255, 0.2);
   border-radius: 50%;
   animation: float 20s linear infinite;
   pointer-events: none;
-  backdrop-filter: blur(1px); /* Added subtle blur effect */
-  border: 1px solid rgba(255, 255, 255, 0.3); /* Added subtle border */
+  backdrop-filter: blur(1px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
 }
 
 /* Set different sizes and positions for bubbles */
@@ -559,10 +555,10 @@ html {
     opacity: 0;
   }
   10% {
-    opacity: 1; /* Increased opacity from 0.5 to 1 */
+    opacity: 1;
   }
   90% {
-    opacity: 1; /* Increased opacity from 0.5 to 1 */
+    opacity: 1;
   }
   100% {
     transform: translateY(-100vh) rotate(360deg);
@@ -574,7 +570,7 @@ html {
   font-size: 2.25rem;
   color: white;
   text-align: center;
-  margin-bottom: 1rem; /* Further reduced */
+  margin-bottom: 1rem;
   position: relative;
   z-index: 2;
 }
@@ -582,7 +578,7 @@ html {
 .services-container {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 1.25rem; /* Further reduced gap */
+  gap: 1.25rem;
   max-width: 1200px;
   width: 100%;
   margin: 0 auto;
@@ -594,11 +590,11 @@ html {
 .service {
   background: rgba(255, 255, 255, 0.95);
   border-radius: 12px;
-  padding: 1.25rem; /* Further reduced padding */
+  padding: 1.25rem;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 0.5rem; /* Further reduced gap */
+  gap: 0.5rem;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
   height: min-content; /* Ensure cards take minimum height needed */
@@ -610,14 +606,14 @@ html {
 }
 
 .service img {
-  width: 45px; /* Further reduced size */
-  height: 45px; /* Further reduced size */
+  width: 45px;
+  height: 45px;
   margin-bottom: 0.25rem;
 }
 
 .service h3 {
   color: #0a6887;
-  font-size: 1.3rem; /* Slightly reduced */
+  font-size: 1.3rem;
   margin: 0;
   text-align: center;
 }
@@ -632,8 +628,8 @@ html {
 .cta-container {
   background-color: #0a6887;
   width: min(100%, 600px);
-  margin: 0 auto; /* Removed top/bottom margin */
-  padding: 1.5rem; /* Further reduced padding */
+  margin: 0 auto;
+  padding: 1.5rem;
   border-radius: 16px;
   box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
   text-align: center;
@@ -657,7 +653,7 @@ html {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: 0.875rem 1.75rem; /* Slightly reduced */
+  padding: 0.875rem 1.75rem;
   font-size: 1.1rem;
   font-weight: 600;
   background-color: #5fc0ec;
@@ -704,7 +700,7 @@ html {
 /* For very tall screens */
 @media (min-height: 900px) {
   .services-background {
-    gap: 2rem; /* Slightly increase gaps for taller screens */
+    gap: 2rem;
   }
 
   .service {
@@ -726,7 +722,7 @@ html {
   overflow: hidden;
 }
 
-/* Optimized background pattern */
+/* Background pattern */
 .bg-pattern {
   position: absolute;
   top: 0;
@@ -930,10 +926,10 @@ html {
 #contact {
   background: linear-gradient(135deg, #98deff 0%, #7ac9ea 100%);
   position: relative;
-  height: 100vh; /* Changed from min-height to height */
+  height: 100vh;
   display: flex;
   align-items: center;
-  padding: 2rem; /* Reduced padding */
+  padding: 2rem;
   overflow: hidden;
 }
 
@@ -956,16 +952,16 @@ html {
 }
 
 .contact-container h2 {
-  font-size: 2rem; /* Reduced size */
+  font-size: 2rem;
   color: #0a6887;
-  margin-bottom: 0.5rem; /* Reduced margin */
+  margin-bottom: 0.5rem;
   text-align: center;
 }
 
 .contact-container > p {
-  font-size: 1rem; /* Reduced size */
+  font-size: 1rem;
   color: #333;
-  margin-bottom: 1.5rem; /* Reduced margin */
+  margin-bottom: 1.5rem;
   text-align: center;
 }
 
@@ -973,7 +969,7 @@ html {
   display: grid;
   grid-template-columns: 1fr 2fr;
   gap: 3rem;
-  background: rgba(255, 255, 255, 0.98); /* Slightly more opaque */
+  background: rgba(255, 255, 255, 0.98);
   border-radius: 15px;
   overflow: hidden;
   max-height: calc(100vh - 8rem);
@@ -983,20 +979,20 @@ html {
 
 .contact-info {
   background: #0a6887;
-  padding: 1.5rem; /* Reduced padding */
+  padding: 1.5rem;
   color: white;
   display: flex;
   flex-direction: column;
-  justify-content: space-around; /* Changed from gap */
+  justify-content: space-around;
 }
 
 .info-item {
   text-align: center;
-  margin-bottom: 1rem; /* Added margin instead of gap */
+  margin-bottom: 1rem;
 }
 
 .contact-icon {
-  font-size: 1.5rem; /* Reduced size */
+  font-size: 1.5rem;
   margin-bottom: 0.5rem;
   display: inline-block;
 }
@@ -1013,13 +1009,13 @@ html {
 }
 
 .contact-form {
-  padding: 1.5rem; /* Reduced padding */
+  padding: 1.5rem;
   background: white;
   overflow-y: auto; /* Added scroll for overflow */
 }
 
 .form-group {
-  margin-bottom: 1rem; /* Reduced margin */
+  margin-bottom: 1rem;
   position: relative;
 }
 
@@ -1044,8 +1040,8 @@ html {
 }
 
 .form-group textarea {
-  height: 100px; /* Fixed height */
-  resize: none; /* Prevent resizing */
+  height: 100px;
+  resize: none;
 }
 
 .contact-submit {
@@ -1463,7 +1459,7 @@ html {
   .navbar-center {
     position: fixed;
     top: 0;
-    left: -100%; /* Start off-screen */
+    left: -100%;
     width: 100%;
     height: 100vh;
     background-color: #0a6887;
