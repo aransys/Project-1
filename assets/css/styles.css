@@ -7,7 +7,6 @@
 
 html {
   font-size: 16px; /* Base font size for responsive typography */
-  scroll-behavior: smooth; /* Add smooth scrolling to the whole page */
 }
 
 body {
