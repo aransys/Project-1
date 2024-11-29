@@ -34,10 +34,10 @@ A modern, responsive website designed for a professional laundry service busines
 - Google Fonts (Roboto) for clean and modern typography.
 
 
-📂 PROJECT STRUCTURE
+
 # Worcester Laundry Service
 
-## Project Structure
+📂 PROJECT STRUCTURE
 
 ```
 Worcester Laundry Service/
