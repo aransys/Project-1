@@ -190,3 +190,10 @@ Open the index.html file in your favorite web browser.
 - [Google Fonts](https://fonts.google.com/) - Roboto family
 - [SVGOMG Optimizer](https://jakearchibald.github.io/svgomg/)
 - [TinyPNG](https://tinypng.com/) - Image compression
+
+# 🤝Contributors
+
+```
+👨‍💻 [Aurimas Ransys]
+   Developer & Designer
+```
