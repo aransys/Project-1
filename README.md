@@ -152,26 +152,41 @@ Open the index.html file in your favorite web browser.
 - Optimized animations with reduced motion support
 - Touch-friendly mobile interactions
 
-# 🌟Dependencies & References
 
-## Core Technologies
-```
-• HTML5 (W3C Spec)
-• CSS3 (W3C Spec)
-• ECMAScript 2021
-```
 
-## External Resources
-```
-• Font Awesome v6.0.0-beta3
-• Google Fonts (Roboto)
-• ARIA Authoring Practices Guide
-```
+## 🌟References & Resources
 
-## Standards
-```
-• Material Design Guidelines
-• iOS Human Interface Guidelines
-• Google HTML/CSS Style Guide
-• Airbnb JavaScript Style Guide
-```
+### Development Standards
+- [W3C HTML Standards](https://html.spec.whatwg.org/)
+- [CSS Working Group Specifications](https://www.w3.org/Style/CSS/)
+- [JavaScript ES2021 Specification](https://262.ecma-international.org/12.0/)
+- [Google HTML/CSS Style Guide](https://google.github.io/styleguide/htmlcssguide.html)
+- [AirBnB JavaScript Style Guide](https://github.com/airbnb/javascript)
+
+### Accessibility
+- [WCAG 2.1 Guidelines](https://www.w3.org/WAI/standards-guidelines/wcag/)
+- [WAI-ARIA Practices](https://www.w3.org/WAI/ARIA/apg/)
+- [WebAIM Contrast Checker](https://webaim.org/resources/contrastchecker/)
+
+### Design Resources
+- [Material Design](https://material.io/design)
+- [Apple Human Interface Guidelines](https://developer.apple.com/design/human-interface-guidelines/)
+- [Bootstrap Documentation](https://getbootstrap.com/docs/5.3/getting-started/introduction/)
+- [CSS Flexbox Guide](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
+- [CSS Grid Guide](https://css-tricks.com/snippets/css/complete-guide-grid/)
+
+### Performance
+- [Web.dev Performance Guide](https://web.dev/learn-web-vitals/)
+- [Google PageSpeed Insights](https://pagespeed.web.dev/)
+- [MDN Performance Best Practices](https://developer.mozilla.org/en-US/docs/Web/Performance)
+
+### Testing
+- [Jest Documentation](https://jestjs.io/docs/getting-started)
+- [Cypress Testing](https://docs.cypress.io/)
+- [Browser Support Tables](https://caniuse.com/)
+
+### Tools Used
+- [Font Awesome Icons](https://fontawesome.com/) - v6.0.0-beta3
+- [Google Fonts](https://fonts.google.com/) - Roboto family
+- [SVGOMG Optimizer](https://jakearchibald.github.io/svgomg/)
+- [TinyPNG](https://tinypng.com/) - Image compression
