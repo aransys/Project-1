@@ -71,7 +71,7 @@ This repository contains the website files for Worcester Laundry Service.
   - `favicon/`: Favicon files
 
 
-#📖 SETUP INSTRUCTIONS
+📖 SETUP INSTRUCTIONS
 Follow these steps to get the website up and running:
 
 1. Clone the Repository
@@ -85,7 +85,7 @@ Confirm that all image and CSS/JS assets are in the correct directories as descr
 Open the index.html file in your favorite web browser.
 
 
-#📊 PERFORMANCE HIGHLIGHTS
+📊 PERFORMANCE HIGHLIGHTS
 
 ## Lighthouse Scores
 
