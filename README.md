@@ -70,6 +70,7 @@ This repository contains the website files for Worcester Laundry Service.
   - `images/`: Image assets
   - `favicon/`: Favicon files
 
+
 📖 SETUP INSTRUCTIONS
 Follow these steps to get the website up and running:
 
@@ -111,6 +112,30 @@ Open the index.html file in your favorite web browser.
 | 320px        | ✅     | ✅         | ✅      |
 | 768px        | ✅     | ✅         | ✅      |
 | 1024px       | ✅     | ✅         | ✅      |
+
+# 🎨Features Breakdown
+
+## Navigation
+- Fixed header with persistent accessibility
+- Smooth scroll behavior
+- Skip-to-content accessibility link
+
+## Hero Section
+- Full-screen background with gradient overlay
+- Animated CTA buttons
+
+## Services Section
+- Dynamic bubble background animations
+- Interactive service cards with hover effects
+- Icon-based service representation
+
+## Pricing Section
+- Clean pricing table layout
+- Visual emphasis on recommended plan
+
+## Contact Section
+- Interactive form validation
+- Google Maps location integration
 | 1440px       | ✅     | ✅         | ✅      |
 
 
