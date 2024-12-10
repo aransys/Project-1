@@ -199,7 +199,7 @@ body {
   min-height: 100vh;
   height: 100vh;
   padding: clamp(3rem, 10vh, 8rem) 1.25rem;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("/assets/images/washing.jpg");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("../images/washing.jpg");
   background-position: top center;
   background-size: cover;
   background-repeat: no-repeat;
