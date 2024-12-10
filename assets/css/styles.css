@@ -654,6 +654,26 @@ html {
   opacity: 0.9;
 }
 
+.cta-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.875rem 1.75rem; 
+  font-size: 1.1rem;
+  font-weight: 600;
+  background-color: #5fc0ec;
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  min-width: 200px;
+}
+
+.cta-button:hover {
+  background-color: #005f8c;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+}
 
 @media (max-width: 992px) {
   .services-container {
