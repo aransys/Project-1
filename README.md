@@ -194,7 +194,7 @@ Follow these steps to get the website up and running:
 
 ## Lighthouse Scores
 
-![Lighthouse Score (mobile)](assets/images/mobile.png)
+![Lighthouse Score (mobile)](assets/images/testing/mobile.png)
 
 | Metric         | Score   |
 | -------------- | ------- |
@@ -203,7 +203,7 @@ Follow these steps to get the website up and running:
 | Best Practices | 100/100 |
 | SEO            | 100/100 |
 
-![Lighthouse Score (desktop)](assets/images/desktop.png)
+![Lighthouse Score (desktop)](assets/images/testing/desktop.png)
 
 | Metric         | Score   |
 | -------------- | ------- |
@@ -214,12 +214,16 @@ Follow these steps to get the website up and running:
 
 ## Cross-Browser Testing
 
-| Browser | Version | Status |
-| ------- | ------- | ------ |
-| Chrome  | 120.0   | ✅     |
-| Firefox | 119.0   | ✅     |
-| Safari  | 17.0    | ✅     |
-| Edge    | 120.0   | ✅     |
+Testing was conducted using BrowserStack to ensure the website works seamlessly across different browsers.
+
+| Browser | Version    | Result  | Notes                                  |
+| ------- | ---------- | ------- | -------------------------------------- |
+| Chrome  | 131 Latest | ✅ Pass | Fully responsive, all features working |
+| Firefox | 133 Latest | ✅ Pass | Fully responsive, all features working |
+| Safari  | 18 Latest  | ✅ Pass | Fully responsive, all features working |
+| Edge    | 131 Latest | ✅ Pass | Fully responsive, all features working |
+
+![Cross-Browser Testing Evidence](assets/images/testing/allbrowsers.png)
 
 ## Responsive Testing
 
