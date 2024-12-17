@@ -16,7 +16,7 @@ window.addEventListener("scroll", function () {
   lastScrollTop = scrollTop <= 0 ? 0 : scrollTop; // Prevent negative scroll values
 });
 
-// Select the form and the button
+// Getting the form and the button
 document.querySelector(".contact-form").addEventListener("submit", function (e) {
   e.preventDefault();
   const button = this.querySelector(".contact-submit");
@@ -35,7 +35,7 @@ document.querySelector("#message").addEventListener("input", function () {
 });
 
 // Hamburger menu
-// Get the necessary elements
+// Getting the necessary elements
 const hamburger = document.querySelector(".hamburger");
 const navMenu = document.querySelector(".navbar-menu");
 const header = document.querySelector(".header");
@@ -47,7 +47,7 @@ function toggleMenu() {
   hamburger.setAttribute("aria-expanded", hamburger.classList.contains("active"));
 }
 
-// Add click event to hamburger
+// Click event to hamburger
 hamburger.addEventListener("click", toggleMenu);
 
 // Close menu when clicking on a link
@@ -85,4 +85,27 @@ window.addEventListener("scroll", () => {
     header.classList.add("scroll-up");
   }
   lastScroll = currentScroll;
+});
+
+// Video toggle functionality
+document.addEventListener("DOMContentLoaded", function () {
+  const videoToggle = document.querySelector(".video-toggle-input");
+  const video = document.getElementById("bgVideo");
+  const label = document.querySelector(".video-toggle-label");
+
+  if (videoToggle && video && label) {
+    // Set initial state
+    video.play();
+    label.textContent = "⏸";
+
+    videoToggle.addEventListener("change", function () {
+      if (this.checked) {
+        video.pause();
+        label.textContent = "▶";
+      } else {
+        video.play();
+        label.textContent = "⏸";
+      }
+    });
+  }
 });

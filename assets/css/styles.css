@@ -10,6 +10,7 @@ html {
     scroll-behavior: smooth;
 }
 
+
 body {
   font-family: "Roboto", sans-serif;
   min-width: 320px; /* Prevent extremely narrow layouts */
@@ -59,6 +60,7 @@ body {
   display: flex;
   gap: 2rem;
   list-style: none;
+  transition: right 0.5s ease-in-out;
 }
 
 .navbar-menu li {
@@ -193,38 +195,51 @@ body {
 }
 
 /* Main Styles */
-/* Hero section */
+/* HERO SECTION */
 .hero-section {
   position: relative;
   min-height: 100vh;
   height: 100vh;
-  padding: clamp(3rem, 10vh, 8rem) 1.25rem;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("../images/washing.jpg");
-  background-position: top center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
   color: #ffffff;
-  display: grid;
-  place-items: center;
   overflow: hidden;
 }
 
-/* Add smooth scrolling to the whole page */
-html {
-  scroll-behavior: smooth;
+/* Video Container */
+.video-container {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
 }
 
-/* Hero content container */
+#bgVideo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Hero Overlay */
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(45deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.3));
+  pointer-events: none;
+  z-index: 2;
+}
+
+/* Hero Content */
 .hero-content {
   position: relative;
-  z-index: 2;
+  z-index: 3;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   max-width: min(90%, 1200px);
   margin: 0 auto;
   text-align: center;
+  padding: 2rem;
 }
 
-/* Typography */
 .hero-title {
   font-size: clamp(2rem, 5vw, 4rem);
   line-height: 1.2;
@@ -239,7 +254,7 @@ html {
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
 }
 
-/* Button container */
+/* Hero Buttons */
 .hero-buttons {
   display: flex;
   gap: clamp(1rem, 3vw, 1.5rem);
@@ -248,9 +263,10 @@ html {
   max-width: 600px;
   margin: 0 auto;
   width: 100%;
+  position: relative;
+  z-index: 4;
 }
 
-/* Base button styles */
 .btn {
   position: relative;
   flex: 1;
@@ -269,9 +285,9 @@ html {
   display: inline-flex;
   justify-content: center;
   align-items: center;
+  z-index: 4;
 }
 
-/* Button variants */
 .btn-primary {
   background-color: #0a6887;
   color: #ffffff;
@@ -285,9 +301,9 @@ html {
   backdrop-filter: blur(5px);
 }
 
-/* Button hover states */
 .btn:hover {
   transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .btn-primary:hover {
@@ -300,45 +316,45 @@ html {
   border-color: #ffffff;
 }
 
-/* Button focus states */
-.btn:focus-visible {
-  outline: 3px solid #ffffff;
-  outline-offset: 2px;
+/* Video Controls */
+.video-toggle-input {
+  display: none;
 }
 
-/* Button active states */
-.btn:active {
-  transform: translateY(1px);
-}
-
-/* Hero overlay */
-.hero-overlay {
+.video-toggle-label {
   position: absolute;
-  inset: 0;
-  background: linear-gradient(45deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.4));
-  z-index: 1;
+  bottom: 100px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.6);
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+  line-height: 1;
+  padding-bottom: 2px;
 }
 
-/* Scroll Arrow Styles */
+.video-toggle-label:hover {
+  background: rgba(0, 0, 0, 0.8);
+}
+
+/* Scroll Arrow */
 .scroll-arrow {
   position: absolute;
-  bottom: 40px;
+  bottom: 30px;
   left: 50%;
   transform: translateX(-50%);
   cursor: pointer;
-  z-index: 2;
+  z-index: 10;
   text-decoration: none;
   padding: 20px;
-  outline: none;
-}
-
-.scroll-arrow:focus {
-  outline: none;
-}
-
-.scroll-arrow:focus .arrow {
-  outline: 3px solid #ffffff;
-  outline-offset: 2px;
 }
 
 .arrow {
@@ -353,60 +369,39 @@ html {
 
 @keyframes bounce {
   0% {
-    transform: rotate(45deg) translate(0, 0);
-    opacity: 0.8;
+      transform: rotate(45deg) translate(0, 0);
+      opacity: 0.8;
   }
   50% {
-    transform: rotate(45deg) translate(10px, 10px);
-    opacity: 0.5;
+      transform: rotate(45deg) translate(10px, 10px);
+      opacity: 0.5;
   }
   100% {
-    transform: rotate(45deg) translate(0, 0);
-    opacity: 0.8;
+      transform: rotate(45deg) translate(0, 0);
+      opacity: 0.8;
   }
 }
 
-/* Responsive adjustments */
+/* Hero Section Media Queries */
 @media (max-width: 768px) {
   .hero-buttons {
-    flex-direction: column;
-    align-items: center;
+      flex-direction: column;
+      align-items: center;
   }
 
   .btn {
-    width: 100%;
-    max-width: 100%;
+      width: 100%;
+      max-width: 100%;
   }
 
   .scroll-arrow {
-    display: none;
+      display: none;
   }
 }
 
 @media (max-height: 600px) {
   .scroll-arrow {
-    display: none;
-  }
-}
-
-/* Print styles */
-@media print {
-  .hero-section {
-    min-height: auto;
-    background: none;
-    color: #000;
-  }
-
-  .hero-overlay {
-    display: none;
-  }
-
-  .hero-buttons {
-    display: none;
-  }
-
-  .scroll-arrow {
-    display: none;
+      display: none;
   }
 }
 
@@ -1127,6 +1122,7 @@ html {
   }
 }
 
+
 /* Footer Section */
 /* Footer base */
 /* Footer base with gradient and animated pattern */
@@ -1218,6 +1214,7 @@ html {
   display: flex;
   align-items: center;
   justify-content: center;
+  text-decoration: none;
   width: 36px;
   height: 36px;
   background: rgba(255, 255, 255, 0.1);
@@ -1670,11 +1667,13 @@ html {
   }
 }
 
-/* Add this specific media query for 1366x768 and similar resolutions */
+
+
+/* specific media query for 1366x768 and similar resolutions */
 @media screen and (max-width: 1366px) and (max-height: 768px) {
   .services-background {
     height: auto;
     min-height: 100vh;
-    padding-top: 4rem; /* Account for fixed header */
+    padding-top: 4rem;
     padding-bottom: 2rem;
   }
