@@ -194,12 +194,23 @@ Follow these steps to get the website up and running:
 
 ## Lighthouse Scores
 
-| Metric         | Score  |
-| -------------- | ------ |
-| Performance    | 94/100 |
-| Accessibility  | 98/100 |
-| Best Practices | 95/100 |
-| SEO            | 96/100 |
+![Lighthouse Score (mobile)](assets/images/mobile.png)
+
+| Metric         | Score   |
+| -------------- | ------- |
+| Performance    | 96/100  |
+| Accessibility  | 92/100  |
+| Best Practices | 100/100 |
+| SEO            | 100/100 |
+
+![Lighthouse Score (desktop)](assets/images/desktop.png)
+
+| Metric         | Score   |
+| -------------- | ------- |
+| Performance    | 100/100 |
+| Accessibility  | 92/100  |
+| Best Practices | 100/100 |
+| SEO            | 100/100 |
 
 ## Cross-Browser Testing
 
