@@ -233,6 +233,10 @@ Testing was conducted using BrowserStack to ensure the website works seamlessly 
 | 768px        | ✅     | ✅         | ✅     |
 | 1024px       | ✅     | ✅         | ✅     |
 
+![Responsive Testing Evidence](assets/images/testing/320.png)
+![Responsive Testing Evidence](assets/images/testing/768.png)
+![Responsive Testing Evidence](assets/images/testing/1024.png)
+
 # 🎨Features Breakdown
 
 ## Navigation
