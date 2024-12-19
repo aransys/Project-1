@@ -1,66 +1,69 @@
-let lastScrollTop = 0; // Variable to track the last scroll position
-const navbar = document.querySelector(".navbar"); // Select the navbar
+/*jshint browser: true, devel: true */
+"use strict";
 
-// Listen to the scroll event
-window.addEventListener("scroll", function () {
-  let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+// Scroll tracking variables
+let lastScrollTop = 0;
+const navbar = document.querySelector(".navbar");
+
+// Navbar scroll behavior
+window.addEventListener("scroll", function handleScroll() {
+  const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
 
   if (scrollTop > lastScrollTop) {
-    // Scrolling down
-    navbar.style.top = "-80px"; // Hide the navbar (adjust height if needed)
+    navbar.style.top = "-80px";
   } else {
-    // Scrolling up
-    navbar.style.top = "0"; // Show the navbar
+    navbar.style.top = "0";
   }
 
-  lastScrollTop = scrollTop <= 0 ? 0 : scrollTop; // Prevent negative scroll values
+  lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
 });
 
-// Getting the form and the button
-document.querySelector(".contact-form").addEventListener("submit", function (e) {
+// Contact form handling
+const contactForm = document.querySelector(".contact-form");
+contactForm.addEventListener("submit", function handleSubmit(e) {
   e.preventDefault();
-  const button = this.querySelector(".contact-submit");
+  const button = contactForm.querySelector(".contact-submit");
   button.classList.add("loading");
 
-  // Simulate form submission
-  setTimeout(() => {
+  window.setTimeout(function () {
     button.classList.remove("loading");
-    // Add success message or redirect
   }, 2000);
 });
 
-document.querySelector("#message").addEventListener("input", function () {
-  const count = this.value.length;
-  this.nextElementSibling.nextElementSibling.textContent = `${count}/500`;
+// Message character counter
+const messageInput = document.querySelector("#message");
+messageInput.addEventListener("input", function handleInput() {
+  const count = messageInput.value.length;
+  const counter = messageInput.nextElementSibling.nextElementSibling;
+  counter.textContent = `${count}/500`;
 });
 
-// Hamburger menu
-// Getting the necessary elements
+// Mobile menu elements
 const hamburger = document.querySelector(".hamburger");
 const navMenu = document.querySelector(".navbar-menu");
 const header = document.querySelector(".header");
 
-// Toggle menu function
 function toggleMenu() {
   hamburger.classList.toggle("active");
   navMenu.classList.toggle("active");
-  hamburger.setAttribute("aria-expanded", hamburger.classList.contains("active"));
+  const isExpanded = hamburger.classList.contains("active");
+  hamburger.setAttribute("aria-expanded", isExpanded);
 }
 
-// Click event to hamburger
 hamburger.addEventListener("click", toggleMenu);
 
-// Close menu when clicking on a link
-document.querySelectorAll(".navbar-menu a").forEach((link) => {
-  link.addEventListener("click", () => {
+// Mobile menu link handling
+const menuLinks = document.querySelectorAll(".navbar-menu a");
+menuLinks.forEach(function handleLink(link) {
+  link.addEventListener("click", function () {
     hamburger.classList.remove("active");
     navMenu.classList.remove("active");
     hamburger.setAttribute("aria-expanded", "false");
   });
 });
 
-// Hide menu when clicking outside
-document.addEventListener("click", (e) => {
+// Outside click handler
+document.addEventListener("click", function handleOutsideClick(e) {
   if (!hamburger.contains(e.target) && !navMenu.contains(e.target)) {
     hamburger.classList.remove("active");
     navMenu.classList.remove("active");
@@ -68,10 +71,11 @@ document.addEventListener("click", (e) => {
   }
 });
 
-// Hide/show header on scroll
+// Header scroll behavior
 let lastScroll = 0;
-window.addEventListener("scroll", () => {
+window.addEventListener("scroll", function handleHeaderScroll() {
   const currentScroll = window.pageYOffset;
+
   if (currentScroll <= 0) {
     header.classList.remove("scroll-up");
     return;
@@ -88,18 +92,17 @@ window.addEventListener("scroll", () => {
 });
 
 // Video toggle functionality
-document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener("DOMContentLoaded", function initVideo() {
   const videoToggle = document.querySelector(".video-toggle-input");
   const video = document.getElementById("bgVideo");
   const label = document.querySelector(".video-toggle-label");
 
   if (videoToggle && video && label) {
-    // Set initial state
     video.play();
     label.textContent = "⏸";
 
-    videoToggle.addEventListener("change", function () {
-      if (this.checked) {
+    videoToggle.addEventListener("change", function handleVideoToggle() {
+      if (videoToggle.checked) {
         video.pause();
         label.textContent = "▶";
       } else {

@@ -340,7 +340,7 @@ Follow these steps to get the website up and running:
 3. Open in Browser
    Open the index.html file in your favorite web browser.
 
-📊 PERFORMANCE HIGHLIGHTS
+# 🛡️ Testing Documentation
 
 ## Lighthouse Scores
 
@@ -387,6 +387,42 @@ Testing was conducted using BrowserStack to ensure the website works seamlessly 
 ![Responsive Testing Evidence](assets/images/testing/768.png)
 ![Responsive Testing Evidence](assets/images/testing/1024.png)
 
+## Code Validation Results
+
+### HTML Validation (W3C Markup Validator)
+
+- **Status**: Passed with 1 error
+- **Error**: [Screenshot and description of the error should be added]
+- **Validation URL**: https://validator.w3.org/
+- **Date Tested**: [12/19/2024]
+
+![HTML Validation Results](assets/images/testing/htmlv.png)
+_Screenshot of W3C HTML Validator results_
+
+### CSS Validation (W3C CSS Validator)
+
+- **Status**: Passed with Font Awesome related warnings
+- **Warnings**: 7 Font Awesome related messages
+  - These warnings are expected and related to Font Awesome's vendor prefixes
+  - They don't affect functionality or compliance
+- **Validation URL**: https://jigsaw.w3.org/css-validator/
+- **Date Tested**: [12/19/2024]
+
+![CSS Validation Results](assets/images/testing/cssv.png)
+_Screenshot of W3C CSS Validator results showing Font Awesome warnings_
+
+### JavaScript Validation (ESLint)
+
+- **Status**: Passed with minor warnings
+- **Configuration**: ESLint with recommended rules
+- **Results**:
+  - 0 errors
+  - Only style-related warnings
+  - All warnings addressed in documentation
+
+![JavaScript Validation Results](assets/images/testing/eslintv.png)
+_Screenshot of ESLint validation results_
+
 # 🎨Features Breakdown
 
 ## Navigation
@@ -416,14 +452,6 @@ Testing was conducted using BrowserStack to ensure the website works seamlessly 
 - Interactive form validation
 - Google Maps location integration
   | 1440px | ✅ | ✅ | ✅ |
-
-# 🛡️Testing Results
-
-```
-✅ HTML Validation   - Passed (0 errors, 2 warnings)
-✅ CSS Validation    - Passed (0 errors)
-✅ JavaScript ESLint - Passed
-```
 
 ## Performance Features
 
