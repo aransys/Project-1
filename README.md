@@ -120,6 +120,40 @@ Backgrounds
 - **Cards and Containers**: Subtle shadows and hover effects
 - **Reasoning**: Creates visual hierarchy while maintaining readability
 
+# 📝 Wireframes
+
+The wireframes were created in the planning stage of development to guide the website's structure and layout across different devices.
+
+## Desktop View
+
+![Desktop Wireframe](assets/images/wireframes/wfdesktop.png)
+
+- Navigation bar with clear service categories
+- Hero section with prominent call-to-action
+- Three-column service showcase layout
+
+## Tablet View
+
+![Tablet Wireframe](assets/images/wireframes/wftablet.png)
+
+- Responsive two-column layout
+- Simplified navigation with dropdown menu
+- Stacked service cards for better readability
+
+## Mobile View
+
+![Mobile Wireframe](assets/images/wireframes/wfmobile.png)
+
+- Single-column layout for optimal mobile viewing
+- Hamburger menu for space efficiency
+- Full-width service cards with touch-friendly targets
+
+Design Evolution:
+
+- Original wireframes were adjusted based on user feedback
+- Color scheme was refined during development
+- Additional interactive elements were added to enhance engagement
+
 ## 🎯 Key Focus Areas
 
 ### ♿ Accessibility Implementation
