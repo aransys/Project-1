@@ -18,18 +18,6 @@ window.addEventListener("scroll", function handleScroll() {
   lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
 });
 
-// Contact form handling
-const contactForm = document.querySelector(".contact-form");
-contactForm.addEventListener("submit", function handleSubmit(e) {
-  e.preventDefault();
-  const button = contactForm.querySelector(".contact-submit");
-  button.classList.add("loading");
-
-  window.setTimeout(function () {
-    button.classList.remove("loading");
-  }, 2000);
-});
-
 // Message character counter
 const messageInput = document.querySelector("#message");
 messageInput.addEventListener("input", function handleInput() {
