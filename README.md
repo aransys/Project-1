@@ -491,7 +491,7 @@ _Screenshot of W3C HTML Validator results_
 ### CSS Validation (W3C CSS Validator)
 
 - **Status**: Passed with Font Awesome related warnings
-- **Warnings**: 7 Font Awesome related messages
+- **Warnings**: 5 Font Awesome related messages
   - These warnings are expected and related to Font Awesome's vendor prefixes
   - They don't affect functionality or compliance
 - **Validation URL**: https://jigsaw.w3.org/css-validator/
