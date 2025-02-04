@@ -481,8 +481,7 @@ Testing was conducted using BrowserStack to ensure the website works seamlessly 
 
 ### HTML Validation (W3C Markup Validator)
 
-- **Status**: Passed with 1 error
-- **Error**: [Screenshot and description of the error should be added]
+- **Status**: Passed
 - **Validation URL**: https://validator.w3.org/
 - **Date Tested**: [12/19/2024]
 

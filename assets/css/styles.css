@@ -1636,7 +1636,6 @@ body {
 /* High Resolution Screens */
 @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
   html {
-    font-smoothing: antialiased;
     -webkit-font-smoothing: antialiased;
   }
 }
