@@ -107,10 +107,23 @@ document.addEventListener("DOMContentLoaded", function initVideo() {
   const pauseIcon = document.querySelector(".pause-icon");
 
   if (videoToggle && video && playIcon && pauseIcon) {
-    playIcon.style.display = "block";
-    pauseIcon.style.display = "none";
-    video.pause();
-    videoToggle.checked = false;
+    video.muted = true;
+    const playPromise = video.play();
+
+    if (playPromise !== undefined) {
+      playPromise
+        .then(() => {
+          playIcon.style.display = "none";
+          pauseIcon.style.display = "block";
+          videoToggle.checked = true;
+        })
+        .catch((error) => {
+          playIcon.style.display = "block";
+          pauseIcon.style.display = "none";
+          video.pause();
+          videoToggle.checked = false;
+        });
+    }
 
     videoToggle.addEventListener("change", function handleVideoToggle() {
       if (videoToggle.checked) {
