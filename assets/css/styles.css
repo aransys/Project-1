@@ -330,14 +330,16 @@ body {
   border-radius: 50%;
   background: rgba(0, 0, 0, 0.6);
   color: white;
-  font-size: 20px;
   cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
   z-index: 10;
-  line-height: 1;
-  padding-bottom: 2px;
+}
+
+.video-toggle-label svg {
+  width: 20px;
+  height: 20px;
 }
 
 .video-toggle-label:hover {
@@ -809,13 +811,14 @@ body {
 .popular-tag {
   position: absolute;
   top: 20px;
-  right: -35px;
+  right: -48px;
   background: #ff6b6b;
   color: white;
   padding: 8px 40px;
   transform: rotate(45deg);
   font-size: 0.9rem;
   font-weight: bold;
+  text-align: center;
 }
 
 #pricing h2 {
