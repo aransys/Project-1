@@ -604,3 +604,84 @@ This project is licensed under the MIT License.
 See the [MIT License](LICENSE) file for more details.
 
 Feel free to copy, customize, or ask for further tweaks!
+
+# 🚀 Deployment
+
+## Deployment Platform: GitHub Pages
+
+The Worcester Laundry Service website is deployed using GitHub Pages, providing a reliable and cost-effective hosting solution. This section outlines the deployment process and configuration details.
+
+### Prerequisites
+
+Before deployment, ensure:
+
+- All code is committed to the main branch
+- HTML, CSS, and JavaScript files are properly organized
+- All file paths use relative URLs
+- Assets (images, videos, etc.) are optimized for web delivery
+- README.md is up to date with current project information
+
+### Deployment Steps
+
+1. **Repository Setup**
+
+   ```bash
+   # Initialize git repository (if not already done)
+   git init
+
+   # Add all files to git
+   git add .
+
+   # Commit changes
+   git commit -m "Initial commit for deployment"
+
+   # Add remote repository
+   git remote add origin https://github.com/aransys/Project-1.git
+
+   # Push to main branch
+   git push -u origin main
+   ```
+
+2. **GitHub Pages Configuration**
+
+   - Navigate to repository Settings
+   - Scroll to "GitHub Pages" section
+   - Select main branch as source
+   - Choose root folder (/)
+   - Save configuration
+
+3. **Domain Configuration**
+
+   - Verify deployment at aransys.github.io/Project-1
+   - Configure custom domain (if applicable)
+   - Enable HTTPS enforcement
+
+4. **Post-Deployment Verification**
+   - Check all pages load correctly
+   - Verify all links work as expected
+   - Test all interactive features
+   - Confirm media loads properly
+   - Validate contact form functionality
+
+### Continuous Integration/Deployment
+
+The project implements a basic CI/CD workflow using GitHub Actions:
+
+```yaml
+name: Deploy to GitHub Pages
+on:
+  push:
+    branches: [main]
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Deploy
+        uses: JamesIves/github-pages-deploy-action@4.1.4
+        with:
+          branch: gh-pages
+          folder: .
+```
+
+Live site: [Worcester Laundry Service](https://aransys.github.io/Project-1)
