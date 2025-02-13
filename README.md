@@ -548,48 +548,224 @@ _Screenshot of ESLint validation results_
 - Optimized animations with reduced motion support
 - Touch-friendly mobile interactions
 
-## 🌟References & Resources
+# Technical Documentation
 
-### Development Standards
+## Introduction
 
-- [W3C HTML Standards](https://html.spec.whatwg.org/)
-- [CSS Working Group Specifications](https://www.w3.org/Style/CSS/)
-- [JavaScript ES2021 Specification](https://262.ecma-international.org/12.0/)
-- [Google HTML/CSS Style Guide](https://google.github.io/styleguide/htmlcssguide.html)
-- [AirBnB JavaScript Style Guide](https://github.com/airbnb/javascript)
+This part of documentation provides a comprehensive breakdown of technologies and features implemented in the Worcester Laundry website project. The website was built using modern web development practices, focusing on responsive design, accessibility, and user experience.
 
-### Accessibility
+The project utilizes HTML5 semantic elements for improved structure and SEO, CSS3 for styling and animations, and vanilla JavaScript for interactivity. External resources like Font Awesome and Google Fonts are integrated to enhance the visual appeal while maintaining performance.
 
-- [WCAG 2.1 Guidelines](https://www.w3.org/WAI/standards-guidelines/wcag/)
-- [WAI-ARIA Practices](https://www.w3.org/WAI/ARIA/apg/)
-- [WebAIM Contrast Checker](https://webaim.org/resources/contrastchecker/)
+This document serves as a reference guide for developers, detailing where and how each technology is implemented within the project.
 
-### Design Resources
+## Table of Contents
 
-- [Material Design](https://material.io/design)
-- [Apple Human Interface Guidelines](https://developer.apple.com/design/human-interface-guidelines/)
-- [Bootstrap Documentation](https://getbootstrap.com/docs/5.3/getting-started/introduction/)
-- [CSS Flexbox Guide](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
-- [CSS Grid Guide](https://css-tricks.com/snippets/css/complete-guide-grid/)
+1. [HTML5 Implementation](#1-html5)
 
-### Performance
+   - Semantic Elements
+   - Forms
+   - Accessibility Features
+   - Meta Information
 
-- [Web.dev Performance Guide](https://web.dev/learn-web-vitals/)
-- [Google PageSpeed Insights](https://pagespeed.web.dev/)
-- [MDN Performance Best Practices](https://developer.mozilla.org/en-US/docs/Web/Performance)
+2. [CSS3 Implementation](#2-css3)
 
-### Testing
+   - Layout Technologies
+     - Flexbox
+     - Grid
+   - Styling Features
+     - Custom Properties
+     - Animations
+     - Media Queries
+     - Pseudo-elements
 
-- [Jest Documentation](https://jestjs.io/docs/getting-started)
-- [Cypress Testing](https://docs.cypress.io/)
-- [Browser Support Tables](https://caniuse.com/)
+3. [JavaScript Implementation](#3-javascript)
 
-### Tools Used
+   - DOM Manipulation
+   - Event Handling
+   - Form Features
+   - Animation Control
 
-- [Font Awesome Icons](https://fontawesome.com/) - v6.0.0-beta3
-- [Google Fonts](https://fonts.google.com/) - Roboto family
-- [SVGOMG Optimizer](https://jakearchibald.github.io/svgomg/)
-- [TinyPNG](https://tinypng.com/) - Image compression
+4. [External Resources](#4-external-resources)
+   - Font Awesome Integration
+   - Google Fonts Implementation
+   - Additional Features
+     - Optimization
+     - Browser Support
+
+---
+
+# Detailed Implementation
+
+## 1. HTML5
+
+### Semantic Elements
+
+- `<header>`: Main site header containing navigation
+- `<nav>`: Main navigation menu
+- `<main>`: Primary content wrapper
+- `<section>`: Used in:
+  - Hero section (#hero)
+  - Services section (#services)
+  - Pricing section (#pricing)
+  - Contact section (#contact)
+- `<footer>`: Site footer with multiple content sections
+
+### Forms
+
+- Contact form (#contact section)
+  - Text inputs
+  - Email input
+  - Select dropdown
+  - Textarea
+  - Submit button
+- Newsletter signup (footer section)
+  - Email input
+  - Submit button
+
+### Accessibility Features
+
+- Skip link: "Skip to main content" at top of page
+- ARIA labels:
+  - Navigation: `aria-label="Main navigation"`
+  - Menu button: `aria-label="Toggle menu"`
+  - Menu items: `role="menuitem"`
+- `alt` attributes on all images
+- Form labels and associations
+
+### Meta Information
+
+- Character encoding
+- Viewport settings
+- SEO meta tags
+- Open Graph meta tags
+- Author information
+- Keywords
+
+## 2. CSS3
+
+### Layout Technologies
+
+#### Flexbox
+
+- Navigation bar layout
+- Service cards internal layout
+- Footer sections
+- Contact form groups
+- Social media icons
+- Hero content centering
+- Button groups in hero section
+
+#### Grid
+
+- Services grid container
+- Pricing tables layout
+- Footer content grid
+- Contact section layout
+
+### Styling Features
+
+#### Custom Properties (Variables)
+
+- Colors:
+  - Primary and secondary gradients
+  - Text colors
+  - Background colors
+  - Accent colors
+- Spacing values
+- Shadow values
+- Transition timings
+
+#### Animations
+
+- Bubble animations in services background
+- Navigation hover effects
+- Button hover states
+- Service card hover effects
+- Scroll arrow animation
+- Menu toggle animation
+- Form focus states
+
+#### Media Queries
+
+- Mobile navigation (@max-width: 768px)
+- Services grid responsiveness
+- Typography scaling
+- Spacing adjustments
+- Footer layout changes
+- Contact form layout
+- Hero section adaptations
+
+#### Pseudo-elements
+
+- Navigation link underlines (::before)
+- Service card decorative elements
+- Form input styling
+
+## 3. JavaScript
+
+### DOM Manipulation
+
+- Mobile menu toggle
+- Video player controls
+- Form validation
+- Character counter
+- Scroll position tracking
+- Class toggling for animations
+
+### Event Handling
+
+- Scroll events for header behavior
+- Click events for mobile menu
+- Form submission events
+- Video player events
+- Outside click detection
+
+### Form Features
+
+- Input validation
+- Character counting
+- Form submission handling with redirects
+
+### Animation Control
+
+- Menu toggle animation
+- Video play/pause
+- Transition management
+
+## 4. External Resources
+
+### Font Awesome (v6.0.0-beta3)
+
+- Social media icons (footer)
+- Contact information icons
+- Service feature icons
+
+### Google Fonts
+
+- Roboto:
+  - Body text
+  - Headings
+  - Form elements
+  - Navigation items
+  - Content text
+- Lobster:
+  - Logo text
+  - Brand elements
+
+### Additional Features
+
+#### Optimization
+
+- Lazy loading of images
+- Optimized fonts
+- Responsive images
+
+#### Browser Support
+
+- Vendor prefixes
+- Fallback values
+- Cross-browser compatibility
+- Mobile device support
 
 # 🤝Contributors
 
