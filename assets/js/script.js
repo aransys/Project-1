@@ -323,6 +323,36 @@ function initScrollAnimations() {
 }
 
 // ==========================================================================
+// Scroll to Top Button
+// ==========================================================================
+
+/**
+ * Show/hide scroll to top button and handle click
+ */
+function initScrollToTop() {
+  const scrollButton = document.getElementById("scrollToTop");
+  
+  if (!scrollButton) return;
+
+  // Show button when scrolled down 300px
+  window.addEventListener("scroll", debounce(function () {
+    if (window.pageYOffset > 300) {
+      scrollButton.classList.add("visible");
+    } else {
+      scrollButton.classList.remove("visible");
+    }
+  }, 100));
+
+  // Scroll to top when clicked
+  scrollButton.addEventListener("click", function () {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth"
+    });
+  });
+}
+
+// ==========================================================================
 // Initialization
 // ==========================================================================
 
@@ -335,6 +365,7 @@ document.addEventListener("DOMContentLoaded", function () {
   initVideo();
   initForms();
   initSmoothScroll();
+  initScrollToTop();
   
   // Optional: Enable scroll animations if you want them
   // initScrollAnimations();

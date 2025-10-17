@@ -116,6 +116,8 @@
   cursor: pointer;
   padding: var(--space-xs);
   z-index: var(--z-dropdown);
+  -webkit-tap-highlight-color: transparent;
+  user-select: none;
 }
 
 .hamburger span {

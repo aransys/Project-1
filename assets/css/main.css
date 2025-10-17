@@ -17,6 +17,7 @@
 /* Utilities */
 @import url('animations.css');
 @import url('responsive.css');
+@import url('scroll-to-top.css');
 
 /* 
   CSS Architecture:

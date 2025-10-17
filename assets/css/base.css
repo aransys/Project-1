@@ -112,10 +112,21 @@ a {
   color: inherit;
 }
 
-/* Focus Styles for Accessibility */
+/* Remove tap highlight on mobile devices */
+* {
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none;
+}
+
+/* Focus Styles for Accessibility - only for keyboard navigation */
 *:focus-visible {
   outline: 2px solid var(--accent-blue);
-  outline-offset: 4px;
+  outline-offset: 2px;
+}
+
+/* Remove default focus outline for mouse users */
+*:focus:not(:focus-visible) {
+  outline: none;
 }
 
 /* Skip to main content link for accessibility */
