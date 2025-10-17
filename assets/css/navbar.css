@@ -1,0 +1,174 @@
+/* ==========================================================================
+   Navigation Styles
+   ========================================================================== */
+
+/* Header */
+.header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: var(--z-fixed);
+  background: var(--primary-gradient);
+  box-shadow: var(--shadow-sm);
+  transition: transform var(--transition-base);
+}
+
+.header.scroll-down {
+  transform: translateY(-100%);
+}
+
+.header.scroll-up {
+  transform: translateY(0);
+}
+
+/* Navbar */
+.navbar {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--space-md);
+  position: relative;
+}
+
+/* Brand */
+.navbar-brand {
+  font-family: "Lobster", cursive;
+  font-size: 2rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: white;
+  z-index: var(--z-dropdown);
+}
+
+.navbar-brand span {
+  height: 40px;
+  width: auto;
+  display: block;
+  transition: transform var(--transition-base);
+}
+
+.navbar-brand:hover span {
+  transform: scale(1.05);
+}
+
+/* Menu */
+.navbar-menu {
+  display: flex;
+  gap: var(--space-xl);
+  list-style: none;
+  transition: right var(--transition-slow);
+}
+
+.navbar-menu li {
+  position: relative;
+}
+
+.navbar-menu a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 1rem;
+  padding: var(--space-xs) var(--space-md);
+  transition: all var(--transition-base);
+  position: relative;
+  display: inline-block;
+}
+
+.navbar-menu a::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: var(--accent-blue);
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform var(--transition-base);
+}
+
+.navbar-menu a:hover::before {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+.navbar-menu a:hover {
+  color: var(--accent-blue);
+}
+
+.navbar-menu a:focus {
+  outline: 2px solid var(--accent-blue);
+  outline-offset: 4px;
+}
+
+/* Hamburger */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 6px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: var(--space-xs);
+  z-index: var(--z-dropdown);
+}
+
+.hamburger span {
+  display: block;
+  width: 25px;
+  height: 2px;
+  background-color: white;
+  transition: all var(--transition-base);
+}
+
+.hamburger:focus {
+  outline: 2px solid var(--accent-blue);
+  outline-offset: 4px;
+}
+
+/* Hamburger animation */
+.hamburger.active span:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+}
+
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+  .hamburger {
+    display: flex;
+  }
+
+  .navbar-menu {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    height: 100vh;
+    width: 250px;
+    background-color: var(--primary-blue);
+    flex-direction: column;
+    padding: 80px var(--space-xl);
+    transition: right var(--transition-base);
+    box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1);
+  }
+
+  .navbar-menu.active {
+    right: 0;
+  }
+
+  .navbar-menu a {
+    width: 100%;
+  }
+}
+

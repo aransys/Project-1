@@ -1,0 +1,159 @@
+/* ==========================================================================
+   Base Styles - Reset, Variables, and Global Styles
+   ========================================================================== */
+
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* CSS Custom Properties */
+:root {
+  /* Primary Colors */
+  --primary-gradient: linear-gradient(135deg, #2d3436 0%, #000000 100%);
+  --secondary-gradient: linear-gradient(135deg, #4834d4 0%, #686de0 100%);
+  --accent: #6c5ce7;
+  --primary-blue: #005f8c;
+  --primary-blue-dark: #0a3d54;
+  --accent-blue: #98deff;
+  --accent-blue-light: #7ac9ea;
+  --accent-blue-lighter: #5fc0ec;
+
+  /* Text Colors */
+  --text-primary: #2d3436;
+  --text-secondary: #636e72;
+  --text-light: #555;
+
+  /* Background Colors */
+  --bg-primary: #ffffff;
+  --bg-secondary: #f5f6fa;
+  --bg-light: #f8f9fa;
+
+  /* Card Colors */
+  --card-bg: rgba(255, 255, 255, 0.95);
+  --card-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+
+  /* Spacing */
+  --space-xs: 0.5rem;
+  --space-sm: 0.75rem;
+  --space-md: 1rem;
+  --space-lg: 1.5rem;
+  --space-xl: 2rem;
+  --space-2xl: 3rem;
+  --space-3xl: 4rem;
+
+  /* Transitions */
+  --transition-fast: 0.2s ease;
+  --transition-base: 0.3s ease;
+  --transition-slow: 0.5s ease;
+
+  /* Border Radius */
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --radius-xl: 16px;
+  --radius-full: 50%;
+
+  /* Shadows */
+  --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.1);
+  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 8px 30px rgba(0, 0, 0, 0.15);
+  --shadow-xl: 0 20px 50px rgba(0, 0, 0, 0.3);
+
+  /* Z-index layers */
+  --z-base: 1;
+  --z-dropdown: 100;
+  --z-sticky: 500;
+  --z-fixed: 1000;
+  --z-modal: 2000;
+}
+
+/* Base HTML */
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  min-width: 320px;
+  overflow-x: hidden;
+  color: var(--text-primary);
+  line-height: 1.6;
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1.2;
+  font-weight: 600;
+}
+
+h1 {
+  font-size: clamp(2rem, 5vw + 1rem, 3.5rem);
+}
+
+h2 {
+  font-size: clamp(1.5rem, 4vw + 0.5rem, 2.5rem);
+}
+
+h3 {
+  font-size: clamp(1.2rem, 3vw + 0.5rem, 1.8rem);
+}
+
+p {
+  font-size: clamp(1rem, 2vw + 0.3rem, 1.2rem);
+}
+
+/* Links */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Focus Styles for Accessibility */
+*:focus-visible {
+  outline: 2px solid var(--accent-blue);
+  outline-offset: 4px;
+}
+
+/* Skip to main content link for accessibility */
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background: var(--accent-blue);
+  color: var(--primary-blue);
+  padding: 8px;
+  z-index: var(--z-modal);
+  transition: top var(--transition-base);
+}
+
+.skip-link:focus {
+  top: 0;
+}
+
+/* Container */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--space-md);
+}
+
+/* Utility Classes */
+.text-center {
+  text-align: center;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+

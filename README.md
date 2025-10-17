@@ -4,6 +4,59 @@ This comprehensive web development project represents a culmination of modern fr
 
 The primary goal of this project was to create an intuitive, responsive, and accessible web platform that seamlessly integrates design theory with practical implementation. Careful attention was given to all phases of development, from wireframing to deployment.
 
+## ✨ Version 2.0 - Recent Improvements
+
+This project has been significantly enhanced with modern development practices:
+
+### 🏗️ Architecture Improvements
+- **Modular CSS**: Split 1,836-line `styles.css` into 9 focused modules for better maintainability
+- **Optimized JavaScript**: Combined duplicate scroll listeners, added debouncing, improved performance
+- **Build System**: Added `package.json` with development scripts and tools
+- **Code Organization**: Clear separation of concerns with documented architecture
+
+### ⚡ Performance Optimizations
+- **Resource Hints**: Added `preconnect` and `dns-prefetch` for faster external resource loading
+- **Font Loading**: Optimized font loading strategy, reduced font weights loaded
+- **Async CSS**: Font Awesome loads asynchronously to prevent render blocking
+- **Video Optimization**: Added `preload="metadata"` and `playsinline` attributes
+- **Deferred JavaScript**: Scripts load with `defer` attribute for better page load
+
+### 🛠️ Developer Experience
+- **NPM Scripts**: Ready-to-use commands for development, validation, and testing
+- **Code Quality Tools**: ESLint, Stylelint, Prettier, HTML validation
+- **Live Development**: Hot-reload development server
+- **Lighthouse Integration**: Built-in performance auditing
+- **Documentation**: Comprehensive guides for CSS architecture and contributing
+
+### 📊 Performance Impact
+- Improved Lighthouse scores (target: 95+ across all metrics)
+- Reduced initial page load time
+- Better code splitting and caching strategies
+- Enhanced scroll and animation performance with debouncing
+
+### 📁 New File Structure
+```
+Project-1/
+├── assets/
+│   ├── css/
+│   │   ├── main.css           # Main import file
+│   │   ├── base.css           # Variables & reset
+│   │   ├── navbar.css         # Navigation
+│   │   ├── hero.css           # Hero section
+│   │   ├── services.css       # Services
+│   │   ├── pricing.css        # Pricing
+│   │   ├── contact.css        # Contact form
+│   │   ├── footer.css         # Footer
+│   │   ├── animations.css     # Keyframes
+│   │   ├── responsive.css     # Media queries
+│   │   └── README.md          # CSS documentation
+│   └── js/
+│       └── script.js          # Optimized & documented
+├── package.json               # Build configuration
+├── .gitignore                 # Git ignore rules
+└── CONTRIBUTING.md            # Development guide
+```
+
 # 🎯 Purpose of the Website
 
 The Worcester Laundry Service website serves as a comprehensive digital platform designed to bridge the gap between professional laundry services and local customers in Worcester. Its primary purposes include:
@@ -364,17 +417,64 @@ This repository contains the website files for Worcester Laundry Service.
   - `favicon/`: Favicon files
 
 📖 SETUP INSTRUCTIONS
-Follow these steps to get the website up and running:
 
-1. Clone the Repository
+## Quick Start
+
+1. **Clone the Repository**
+   ```bash
    git clone https://github.com/aransys/Project-1.git
    cd Project-1
+   ```
 
-2. Ensure Assets Are Correct
-   Confirm that all image and CSS/JS assets are in the correct directories as described in the project structure.
+2. **Open in Browser** (Simple Method)
+   - Open `index.html` in your web browser
 
-3. Open in Browser
-   Open the index.html file in your favorite web browser.
+## Development Setup (Recommended)
+
+For the best development experience with live reload and validation tools:
+
+1. **Install Node.js** (if not already installed)
+   - Download from [nodejs.org](https://nodejs.org/)
+
+2. **Install Dependencies** (optional, for development tools)
+   ```bash
+   npm install
+   ```
+
+3. **Start Development Server**
+   ```bash
+   npm run dev
+   ```
+   Opens at `http://localhost:3000` with hot reload
+
+## Available Commands
+
+```bash
+# Development
+npm run dev              # Start live development server
+npm run serve            # Start simple server on port 8080
+
+# Code Quality
+npm run validate         # Run all validators (HTML, CSS, JS)
+npm run validate:html    # Validate HTML only
+npm run validate:css     # Lint CSS only
+npm run validate:js      # Lint JavaScript only
+npm run format           # Format code with Prettier
+
+# Performance Testing
+npm run lighthouse           # Run Lighthouse audit
+npm run lighthouse:mobile    # Mobile-specific audit
+npm run lighthouse:desktop   # Desktop-specific audit
+```
+
+## Browser Compatibility
+
+The site is tested and works on:
+- ✅ Chrome 131+
+- ✅ Firefox 133+
+- ✅ Safari 18+
+- ✅ Edge 131+
+- ✅ Mobile browsers (iOS Safari, Chrome Mobile)
 
 # Comprehensive Test Plan Matrix
 

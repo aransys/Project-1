@@ -1,0 +1,33 @@
+/* ==========================================================================
+   Main Stylesheet - Modular CSS Import
+   Worcester Laundry Service
+   ========================================================================== */
+
+/* Base Styles - Variables, Reset, Typography */
+@import url('base.css');
+
+/* Layout Components */
+@import url('navbar.css');
+@import url('hero.css');
+@import url('services.css');
+@import url('pricing.css');
+@import url('contact.css');
+@import url('footer.css');
+
+/* Utilities */
+@import url('animations.css');
+@import url('responsive.css');
+
+/* 
+  CSS Architecture:
+  - base.css: Global styles, variables, resets
+  - navbar.css: Navigation and header
+  - hero.css: Hero section with video
+  - services.css: Services section with bubble effects
+  - pricing.css: Pricing tables
+  - contact.css: Contact form and info
+  - footer.css: Footer with newsletter
+  - animations.css: All keyframe animations
+  - responsive.css: Media queries and responsive utilities
+*/
+
