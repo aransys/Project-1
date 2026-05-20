@@ -1,0 +1,80 @@
+{
+  "name": "worcester-laundry",
+  "version": "3.0.0",
+  "description": "Worcester Laundry — responsive landing page for a fictional laundry &amp; dry-cleaning business. Vanilla HTML/CSS/JS, no build step.",
+  "main": "index.html",
+  "scripts": {
+    "dev": "npx live-server --port=3000 --open=index.html",
+    "serve": "npx live-server --port=8080 --no-browser",
+    "validate:html": "npx html-validate index.html thankyou.html newsletter-thanks.html",
+    "validate:css": "npx stylelint \"assets/css/**/*.css\"",
+    "validate:js": "npx eslint assets/js/script.js",
+    "validate": "npm run validate:html && npm run validate:css && npm run validate:js",
+    "format": "npx prettier --write \"**/*.{html,css,js,json,md}\"",
+    "lighthouse": "npx lighthouse http://localhost:8080 --view",
+    "lighthouse:mobile": "npx lighthouse http://localhost:8080 --preset=mobile --view",
+    "lighthouse:desktop": "npx lighthouse http://localhost:8080 --preset=desktop --view"
+  },
+  "keywords": [
+    "laundry",
+    "landing-page",
+    "static-site",
+    "html",
+    "css",
+    "vanilla-js",
+    "responsive",
+    "dark-mode",
+    "accessibility"
+  ],
+  "author": "Aurimas Ransys",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/aransys/Project-1.git"
+  },
+  "devDependencies": {
+    "eslint": "^8.57.0",
+    "html-validate": "^8.0.0",
+    "lighthouse": "^11.0.0",
+    "live-server": "^1.2.2",
+    "prettier": "^3.2.0",
+    "stylelint": "^16.0.0",
+    "stylelint-config-standard": "^36.0.0"
+  },
+  "browserslist": [
+    "last 2 versions",
+    "> 1%",
+    "not dead"
+  ],
+  "prettier": {
+    "semi": true,
+    "singleQuote": false,
+    "tabWidth": 2,
+    "useTabs": false,
+    "printWidth": 100
+  },
+  "eslintConfig": {
+    "env": {
+      "browser": true,
+      "es2021": true
+    },
+    "extends": "eslint:recommended",
+    "parserOptions": {
+      "ecmaVersion": "latest",
+      "sourceType": "script"
+    },
+    "rules": {
+      "no-unused-vars": "warn",
+      "no-console": "off"
+    }
+  },
+  "stylelint": {
+    "extends": "stylelint-config-standard",
+    "rules": {
+      "no-descending-specificity": null,
+      "selector-class-pattern": null,
+      "custom-property-pattern": null,
+      "media-feature-range-notation": null
+    }
+  }
+}

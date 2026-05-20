@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Thank you · Worcester Laundry</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <style>
+      .thanks {
+        min-height: 100vh; min-height: 100svh;
+        display: grid; place-items: center; padding: 40px 20px;
+        background: linear-gradient(135deg, #22a4d4 0%, #0a6887 60%, #054861 100%);
+        position: relative; overflow: hidden;
+      }
+      .thanks::before {
+        content: ""; position: absolute; inset: 0;
+        background-image: radial-gradient(circle at 1px 1px, rgba(255,255,255,.2) 1px, transparent 0);
+        background-size: 28px 28px;
+        mask-image: radial-gradient(ellipse at center, #000 30%, transparent 70%);
+      }
+      .thanks-card {
+        position: relative; max-width: 540px; padding: 56px 40px;
+        background: rgba(255,255,255,.08); border: 1px solid rgba(255,255,255,.18);
+        border-radius: 28px; backdrop-filter: blur(18px) saturate(1.4);
+        text-align: center; color: #fff; box-shadow: 0 30px 70px -20px rgba(0,0,0,.4);
+      }
+      .check {
+        width: 88px; height: 88px; border-radius: 50%; margin: 0 auto 24px;
+        background: rgba(109,240,163,.18); border: 2px solid #6df0a3;
+        display: grid; place-items: center; color: #6df0a3;
+        animation: pop .6s cubic-bezier(.2,.8,.2,1) both;
+      }
+      @keyframes pop { from { transform: scale(.4); opacity: 0; } to { transform: scale(1); opacity: 1; } }
+      .thanks-card h1 {
+        font-family: 'Fraunces', Georgia, serif; font-weight: 600;
+        font-size: clamp(2rem, 4vw + 1rem, 3rem); letter-spacing: -.02em; line-height: 1.05;
+      }
+      .thanks-card p { color: rgba(255,255,255,.85); margin-top: 14px; font-size: 1.05rem; }
+      .thanks-card .btn {
+        display: inline-flex; align-items: center; gap: 10px;
+        padding: 14px 26px; margin-top: 30px;
+        background: #fff; color: #0a6887; border-radius: 999px; font-weight: 600;
+        transition: transform .3s ease, box-shadow .3s ease;
+      }
+      .thanks-card .btn:hover { transform: translateY(-2px); box-shadow: 0 14px 28px -10px rgba(0,0,0,.3); }
+    </style>
+  </head>
+  <body>
+    <main class="thanks">
+      <div class="thanks-card">
+        <div class="check">
+          <svg width="42" height="42" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+        </div>
+        <h1>Message received.</h1>
+        <p>Thanks for reaching out — we usually reply within the hour during opening times (Mon–Sat, 8am–8pm). Check your inbox shortly.</p>
+        <a href="index.html" class="btn">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
+          Back to home
+        </a>
+      </div>
+    </main>
+  </body>
+</html>
