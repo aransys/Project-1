@@ -1,0 +1,208 @@
+/* ==========================================================================
+   Responsive Styles and Media Queries
+   ========================================================================== */
+
+/* Responsive Breakpoints */
+:root {
+  --breakpoint-sm: 576px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 992px;
+  --breakpoint-xl: 1200px;
+}
+
+/* Base Mobile Styles (320px+) */
+@media screen and (min-width: 320px) {
+  :root {
+    --space-xl: 2rem;
+    --space-lg: 1.5rem;
+    --space-md: 1rem;
+    --space-sm: 0.75rem;
+  }
+
+  .container {
+    padding: 0 var(--space-md);
+  }
+
+  .navbar {
+    padding: var(--space-sm);
+    height: auto;
+  }
+
+  .navbar-brand {
+    margin-bottom: var(--space-sm);
+  }
+
+  .navbar-links {
+    gap: var(--space-sm);
+  }
+
+  /* Sections */
+  .hero-section,
+  .services-background,
+  #pricing,
+  #contact {
+    padding: var(--space-lg) var(--space-md);
+    min-height: 100svh;
+  }
+
+  /* Components */
+  .service,
+  .pricing-item,
+  .contact-form {
+    width: 100%;
+    margin-bottom: var(--space-md);
+  }
+}
+
+/* Small Devices (576px+) */
+@media screen and (min-width: 576px) {
+  :root {
+    --space-xl: 2.5rem;
+    --space-lg: 2rem;
+  }
+
+  .services-container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-md);
+  }
+}
+
+/* Tablets (768px+) */
+@media screen and (min-width: 768px) {
+  :root {
+    --space-xl: 3rem;
+    --space-lg: 2.5rem;
+  }
+
+  .navbar {
+    flex-direction: row;
+    padding: var(--space-md) var(--space-lg);
+  }
+
+  .navbar-brand {
+    margin-bottom: 0;
+  }
+
+  .navbar-links {
+    flex-direction: row;
+    gap: var(--space-md);
+  }
+
+  .services-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .contact-wrapper {
+    grid-template-columns: 1fr 2fr;
+  }
+}
+
+/* Desktop (992px+) */
+@media screen and (min-width: 992px) {
+  :root {
+    --space-xl: 4rem;
+    --space-lg: 3rem;
+  }
+
+  .container {
+    max-width: 1140px;
+    margin: 0 auto;
+  }
+
+  .services-container {
+    gap: var(--space-lg);
+  }
+}
+
+/* Large Desktop (1200px+) */
+@media screen and (min-width: 1200px) {
+  .container {
+    max-width: 1200px;
+  }
+}
+
+/* Touch Device Optimization */
+@media (hover: none) {
+  .navbar-links a,
+  .cta-button,
+  .contact-submit,
+  .footer-socials a {
+    --touch-target: 44px;
+    min-height: var(--touch-target);
+    min-width: var(--touch-target);
+    padding: var(--space-sm) var(--space-md);
+  }
+
+  /* Remove hover effects on touch devices */
+  .service:hover,
+  .pricing-item:hover {
+    transform: none;
+  }
+}
+
+/* High Resolution Screens */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  html {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
+
+/* Landscape Orientation on Mobile */
+@media (max-width: 768px) and (orientation: landscape) {
+  .hero-section {
+    min-height: auto;
+    padding: var(--space-3xl) var(--space-md);
+  }
+
+  .scroll-arrow {
+    display: none;
+  }
+}
+
+/* Print Styles */
+@media print {
+  * {
+    background: transparent !important;
+    color: #000 !important;
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+
+  a[href]::after {
+    content: " (" attr(href) ")";
+  }
+
+  @page {
+    margin: 0.5cm;
+  }
+
+  .header,
+  .footer,
+  .video-container,
+  .bubbles,
+  .scroll-arrow,
+  .hamburger {
+    display: none !important;
+  }
+
+  .hero-section,
+  .services-background,
+  #pricing,
+  #contact {
+    page-break-inside: avoid;
+  }
+}
+
+/* Dark Mode Support (Future Enhancement) */
+@media (prefers-color-scheme: dark) {
+  /* Uncomment when implementing dark mode
+  :root {
+    --text-primary: #f5f6fa;
+    --text-secondary: #dfe6e9;
+    --bg-primary: #2d3436;
+    --bg-secondary: #1e272e;
+  }
+  */
+}
+

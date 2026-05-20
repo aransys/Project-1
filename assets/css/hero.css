@@ -1,0 +1,254 @@
+/* ==========================================================================
+   Hero Section Styles
+   ========================================================================== */
+
+.hero-section {
+  position: relative;
+  min-height: 100vh;
+  height: 100vh;
+  color: #ffffff;
+  overflow: hidden;
+}
+
+/* Video Container */
+.video-container {
+  position: absolute;
+  inset: 0;
+  z-index: var(--z-base);
+}
+
+#bgVideo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Hero Overlay */
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    45deg,
+    rgba(45, 52, 54, 0.8),
+    rgba(72, 120, 171, 0.3)
+  );
+  pointer-events: none;
+  z-index: 2;
+}
+
+/* Hero Content */
+.hero-content {
+  position: relative;
+  z-index: 3;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-width: min(90%, 1200px);
+  margin: 0 auto;
+  text-align: center;
+  padding: var(--space-xl);
+}
+
+.hero-title {
+  font-size: clamp(2rem, 5vw, 4rem);
+  line-height: 1.2;
+  margin-bottom: var(--space-md);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.hero-description {
+  font-size: clamp(1rem, 2.5vw, 1.25rem);
+  line-height: 1.6;
+  margin-bottom: 2.5rem;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+/* Hero Buttons */
+.hero-buttons {
+  display: flex;
+  gap: clamp(1rem, 3vw, 1.5rem);
+  justify-content: center;
+  flex-wrap: wrap;
+  max-width: 600px;
+  margin: 0 auto;
+  width: 100%;
+  position: relative;
+  z-index: 4;
+}
+
+.btn {
+  position: relative;
+  flex: 1;
+  width: 200px;
+  max-width: 250px;
+  min-width: 200px;
+  padding: var(--space-md) var(--space-xl);
+  border-radius: var(--radius-md);
+  font-weight: 600;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  transition: all var(--transition-base);
+  overflow: hidden;
+  white-space: nowrap;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 4;
+}
+
+.btn-primary {
+  background-color: rgba(0, 95, 140, 0.6);
+  color: #ffffff;
+  border: 2px solid #ffffff;
+  backdrop-filter: blur(5px);
+  box-shadow: 0 4px 15px rgba(45, 52, 54, 0.3);
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-primary::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.2),
+    transparent
+  );
+  transition: 0.5s;
+}
+
+.btn-primary:hover::before {
+  left: 100%;
+}
+
+.btn-secondary {
+  background-color: rgba(95, 192, 236, 0.6);
+  color: #ffffff;
+  border: 2px solid #ffffff;
+  backdrop-filter: blur(5px);
+  box-shadow: 0 4px 15px rgba(45, 52, 54, 0.3);
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-secondary::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.2),
+    transparent
+  );
+  transition: 0.5s;
+}
+
+.btn-secondary:hover::before {
+  left: 100%;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.btn-primary:hover {
+  background-color: rgba(95, 192, 236, 0.4);
+  border-color: #ffffff;
+  box-shadow: 0 6px 20px rgba(45, 52, 54, 0.4);
+}
+
+.btn-secondary:hover {
+  background-color: rgba(255, 255, 255, 0.4);
+  border-color: #ffffff;
+  box-shadow: 0 6px 20px rgba(45, 52, 54, 0.4);
+}
+
+/* Video Controls */
+.video-toggle-input {
+  display: none;
+}
+
+.video-toggle-label {
+  position: absolute;
+  bottom: 100px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 48px;
+  height: 48px;
+  border-radius: var(--radius-full);
+  background: rgba(0, 0, 0, 0.6);
+  color: white;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+  transition: background var(--transition-base);
+}
+
+.video-toggle-label svg {
+  width: 20px;
+  height: 20px;
+}
+
+.video-toggle-label:hover {
+  background: rgba(0, 0, 0, 0.8);
+}
+
+/* Scroll Arrow */
+.scroll-arrow {
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  cursor: pointer;
+  z-index: 10;
+  text-decoration: none;
+  padding: 20px;
+}
+
+.arrow {
+  width: 30px;
+  height: 30px;
+  border-right: 3px solid #ffffff;
+  border-bottom: 3px solid #ffffff;
+  transform: rotate(45deg);
+  animation: bounce 2s infinite;
+  opacity: 0.8;
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+  .hero-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .btn {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .scroll-arrow {
+    display: none;
+  }
+}
+
+@media (max-height: 600px) {
+  .scroll-arrow {
+    display: none;
+  }
+}
+
