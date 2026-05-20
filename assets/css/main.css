@@ -454,29 +454,57 @@ input, select, textarea, button { font: inherit; color: inherit; }
 .reveal.visible { opacity: 1; transform: translateY(0); }
 
 /* ---------- Responsive ---------- */
+
+/* Tablet portrait & landscape — most iPads except iPad Pro 12.9" */
 @media (max-width: 1024px) {
   .services-container, .testimonial-grid, .process-grid { grid-template-columns: repeat(2, 1fr); }
   .stats-grid { grid-template-columns: repeat(2, 1fr); }
-  .pricing-table { grid-template-columns: 1fr; max-width: 520px; margin-inline: auto; }
-  .pricing-item.featured { transform: none; }
-  .estimator-grid { grid-template-columns: 1fr; }
+  .estimator-grid { grid-template-columns: 1fr 1fr; }
   .footer-container { grid-template-columns: 1fr 1fr; }
   .process-grid::before { display: none; }
   .contact-wrapper { grid-template-columns: 1fr; }
+  /* Pricing: keep 3 columns at tablet but shrink the cards so they don't look huge */
+  .pricing-table { gap: 16px; }
+  .pricing-item { padding: 28px 22px; }
+  .pricing-item .price .amount { font-size: 2rem; }
+  .pricing-item.featured { transform: none; }
+  .popular-tag { right: 18px; padding: 5px 10px; font-size: .68rem; }
 }
 
-@media (max-width: 720px) {
+/* Tablets where the full nav doesn't fit anymore — switch to the mobile drawer */
+@media (max-width: 1023px) {
   .navbar-menu, .nav-cta { display: none; }
   .hamburger { display: flex; }
+}
+
+/* Phones / small tablets */
+@media (max-width: 720px) {
   .brand-sub { display: none; }
   .services-container, .testimonial-grid, .process-grid, .stats-grid { grid-template-columns: 1fr; }
-  .footer-container { grid-template-columns: 1fr; gap: 36px; }
+  .estimator-grid { grid-template-columns: 1fr; }
+  .pricing-table { grid-template-columns: 1fr; max-width: 420px; margin-inline: auto; gap: 18px; }
+  .pricing-item { padding: 32px 26px; }
+  .pricing-item .price .amount { font-size: 2.4rem; }
   .form-row { grid-template-columns: 1fr; }
   .services-background, .process-section, .pricing-section, .testimonials, .faq-section, .contact-section { padding: 80px 0; }
   .hero-content { padding: 100px 20px 80px; }
   .hero-trust .trust-badges { gap: 12px; font-size: .78rem; }
   .estimator { padding: 24px; }
   .contact-form { padding: 24px; }
+
+  /* Footer: stack and center everything */
+  .footer-container {
+    grid-template-columns: 1fr;
+    gap: 36px;
+    text-align: center;
+  }
+  .footer-about .footer-logo { justify-content: center; }
+  .footer-socials { justify-content: center; }
+  .footer-contact .contact-info,
+  .footer-contact .contact-info li { grid-template-columns: 1fr; gap: 4px; justify-items: center; text-align: center; }
+  .footer-contact .contact-info i { display: none; }
+  .footer-links ul { padding: 0; }
+  .newsletter-form { max-width: 380px; margin-inline: auto; }
 }
 
 @media (max-width: 480px) {
